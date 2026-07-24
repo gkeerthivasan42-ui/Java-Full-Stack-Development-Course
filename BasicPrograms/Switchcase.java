@@ -32,6 +32,7 @@ public class Switchcase
             break;
          default:
             System.out.println("Invalid input! Please enter a number between 1 and 7.");   
-      } 
+      }
+      scanner.close(); 
    }
 }
