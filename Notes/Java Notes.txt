@@ -1,0 +1,70 @@
+Arithmetic operators
++ - Addition
+- - Subtraction
+* - Multiplication
+/ - Division
+% - Modulus
+22.07.2026
+
+git add
+git commit -m "massage"
+git push
+
+step 1: create repository (don't forget to tick readme and license)
+step 2: copy git repository link
+step 3: create new folder(d:/nmvn)
+step 4: open cmd : d:/nmvn> git clone paste git link
+step 5: cd gitrepository
+step 6: code .
+step 7: add files
+step 8: git add .
+step 9: git commit -m "your message" (first time: email,github name) 
+step 10: git push
+
+Program:
+using  control statements:
+
+1) find discount amount of purchase items.
+
+input: total purchase amount: 999
+output: Discount amount : 0
+
+1000-1999 5%
+2000-3999 7%
+4000-6000 8%
+6000 and above 10%
+
+23.07.2026
+1) Switch case
+2)println,print,format
+
+24.07.2026
+
+switch case statement:
+========================
+
+def: expression based execution
+
+expression ? var var+1 a+b/c a+c
+
+syntax:
+switch(expression)
+{
+	case value1:
+		statement;
+		break;
+	case value2:
+		statement;
+		break;
+	case value3:
+		statement;
+		break;
+.........................
+	default:
+		default statement;
+}
+example:
+int k=1
+switch(k)
+{
+}
