@@ -67,4 +67,30 @@ example:
 int k=1
 switch(k)
 {
+ case 1:
+	s.o.p("one");
+	break;
+ case 2:
+	s.o.p("two");
+	break;
+.........
+ default:
+	s.o.p("Enter correct choice");
+	break;
 }
+
+VS Code
+Shortcuts:
+1. Ctrl+B for Explorer
+2. CTRL+`  for terminal
+
+Terminals Shortcuts
+1.cd - folder location change
+2. cd.. - go back to the previous folder
+
+Task:
+ findout the leaf year or not using switch case in java program
+ Input: Enter the year:2028
+	Enter month:2
+ output:
+ 	No.of days: 29
