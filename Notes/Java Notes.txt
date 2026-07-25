@@ -7,7 +7,7 @@ Arithmetic operators
 22.07.2026
 
 git add
-git commit -m "massage"
+git commit -m "message"
 git push
 
 step 1: create repository (don't forget to tick readme and license)
@@ -94,3 +94,118 @@ Task:
 	Enter month:2
  output:
  	No.of days: 29
+
+25.07.2026
+
+Introduction to Programming:
+===========================
+
+program?
+	set of instructions
+
+purpose of using a program?
+	*) manpower reduction
+	*) fast and efficient
+	*) accuracy
+	*) problem solving
+	*) Automatic
+	*) Secure storage
+
+variables?
+	variable is a user-defined identifier
+	Storing data in RAM
+	Temporary memory
+	
+	The value changes during execution of the program.
+	ex: RAM, pendrive, memory card
+constant:
+	The value does not change during execution of the program.
+	ex: cd-r-dvd-r
+variable naming rules?
+	*) Must start with alphabets (a-z) or _(Underscore)
+	*) Do not start with a number, but we can use the second letter onwards
+	*) Keywords or reserved words are not allowed
+	*) Special chars not allowed except_
+	*) Variable names must be unique
+	*) Spaces not allowed
+
+Keywords or reserved words:
+========================
+1.switch
+2.for
+3.static
+4.break
+5. continue
+6.return
+7.int
+8.while
+9.public
+10.private
+11.void
+12.double
+13.protected
+14.long
+15.float
+16.do
+17. case
+18.new
+19.byte
+20.this
+21.if
+22. else
+23. char
+24. enum
+25. abstract
+26.boolean
+27.short
+28.try
+29.super
+30.catch
+31. throw
+32. throws
+33.extends
+34. implements
+35.finally
+36.final
+37.null
+67 keywords in Java
+
+looping or iterator:
+====================
+
+	definition: a set of same statements executes more then one times until condition is true.
+
+	types:
+	1) for loop - fixed iteration
+	2) while loop - unfixed iteration with entry loop
+	3) do.. while loop - unfixed iteration with exit loop
+	4) nested loop - a loop within a loop
+
+1) for loop:
+============
+
+for(initial; condition; increment/decrement)
+{
+statement;
+}
+
+execution steps:
+
+step 1: initial (starting value)
+	ex: int i=1
+step 2: condition (true/false)
+	ex: i<10
+	if true means goto step3
+	if false means end loop
+step 3: statement
+	ex: s.o.p(i)
+step 4: increment/decrement
+	ex: i++ or i=i+1 or i+=1
+step 5: step 2
+
+ex:
+for(int i=5;i<17;i+=3)
+{
+s.o.p(i);
+}
+o/p: 5 8 11 14
