@@ -14,7 +14,7 @@ public class SwitchDemo1 {
             case 'S':
                 System.out.println("Subtraction: "+(a-b));
                 break;
-            case 'M':
+            case 'M': 
                 System.out.println("Multiplication: "+(a*b));
                 break;
             case 'D':
