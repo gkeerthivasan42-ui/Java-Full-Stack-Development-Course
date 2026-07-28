@@ -209,3 +209,89 @@ for(int i=5;i<17;i+=3)
 s.o.p(i);
 }
 o/p: 5 8 11 14
+
+27.06.2026
+
+RAPTOR Software - it is used for draw the flow chart
+
+28.06.2026
+
+Fibbnoacci series:
+
+input:
+6
+
+output:
+0 1 1 2 3 5
+
+default: f3= -1 + 1
+	 f3= f1   f2
+
+Prime Number
+
+7 --------> 7%1 7%7 prime
+9 --------> 9%1 9%2 9%3 .......... not prime number
+
+reverse for loop
+================
+
+for(int i=10;i>=10;i--)
+{
+System.out.println(i);
+}
+
+output:
+10 9 8 7 6 5 4 3 2 1
+
+task:
+=====
+
+Enter Your Name: KEERTHIVASAN G
+output:
+
+task: (vowels + count)
+=====
+
+	Enter Your Name:Keerthivasan G
+
+	output: eeiaa (5)
+
+prequest:
+	name.charAt(.);
+	name.length();
+	contains
+
+task:2 (reverse name)
+======
+	Enter Your name: Ashika
+
+	output: akihsA
+
+prerequest:
+	length
+	charAt
+
+task:3 (find letter)
+======
+	Enter Your Name: Pavithra
+
+	Enter find char: i
+
+	output:
+
+	i is found at index:3
+
+	ex:2
+	Enter Your Name: Meera
+	Enter find char: Z
+
+	z is not found
+
+	ex:3
+	Enter Your Name: Hemalatha
+	Enter find char: a
+	output: 
+	a is found at index: 3
+	a is found at index: 5
+	a is found at index: 8
+======
