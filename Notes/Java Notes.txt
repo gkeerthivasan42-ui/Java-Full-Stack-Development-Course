@@ -295,3 +295,45 @@ task:3 (find letter)
 	a is found at index: 5
 	a is found at index: 8
 ======
+29.07.2026
+Intro Linux:
+ *) Linux is a OS(Operating system)
+ Linux advantage:
+ *) high security
+ *) data safe
+ *) no need to anti virus
+ disadvantage:
+ *) work to hard
+
+git and GitHub:
+
+	git ----------->
+			data storage local to cloud
+	GitHub -------->
+			website
+
+basic for loop:(Completed)
+==============
+1. sum of series
+2. prime or no
+3. vowels+count
+4. fibbonacci series
+5. multiplication table
+6. reverse name
+7. find index of the char
+
+7. find index of the char
+=========================
+step 1: get text/name input from user                    Scanner, next
+step 2: get single letter input from user                next().charAt(0)
+step 3: calculate length of text                         name.length()
+step 4: condition (check char in text)                   for() {if(), charAt()}  
+step 5: result : display index of the char/not found     s.o.p
+			
+8. Enter your name:keerthi
+	    output:kiehetr
+
+			Keerthi
+			0123456
+
+			051423
