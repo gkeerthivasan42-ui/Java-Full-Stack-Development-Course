@@ -337,3 +337,16 @@ step 5: result : display index of the char/not found     s.o.p
 			0123456
 
 			051423
+
+Jumping statement:
+=================
+
+1) continue(only use loop)
+	-> skip the remaining statements
+	-> direct
+2) break(use switch and loop)
+	-> terminate or end loop
+
+note:
+	continue: only work on inside the loop
+	break: its work on both loop + switch
