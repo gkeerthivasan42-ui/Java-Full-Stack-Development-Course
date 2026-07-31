@@ -9,7 +9,7 @@ public class RemoveSpace {
         for(int i=0;i<len-1;i++){
             char c1=text.charAt(i);
             char c2=text.charAt(i+1);
-            if(c1==' ' && c2==32)
+            if(c1==' ' && c2==32) // same value 32 and space " "
                 continue;
             else
                 res=res+c1;
