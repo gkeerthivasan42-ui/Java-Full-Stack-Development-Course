@@ -350,3 +350,132 @@ Jumping statement:
 note:
 	continue: only work on inside the loop
 	break: its work on both loop + switch
+
+30.07.2026
+1) count alphabets, numbers, and special chars
+Enter Text:
+ karur.123.keerthi@gmail.com
+output:
+	alphabets:
+	number:
+	special char:
+Note:
+	while checking char @ implement break.
+2) Enter your text:
+	input: I      am     so    good
+	output: I am so good
+
+31.07.2026
+
+Problem sloving
+1 byte 8 bits
+1024 bytes = 1 kb
+1024 kb = 1 mb
+1024 mb = 1 gb
+1024 gb = 1 tb
+
+while loop:
+===========
+def: unfixed iteration with entry loop.
+
+syntax:
+	initial;
+	while(condition)
+	{
+	statement;-------->s.o.p / if / break / continue
+	}
+
+prequest:
+
+10%10 ---------->0
+10/10 ---------->1
+
+4%10 ----------->4
+4/10 ----------->0
+
+44/10 ---------->4
+45%10 ---------->5
+
+1234%10 -------->4
+1234/10 -------->123
+
+1%10 --------->1
+5%10 --------->5
+
+5/10 --------->0
+
+9/10 --------->0
+9%10 --------->9
+
+task:1 using while loop
+	n=12348
+display even number=248
+display odd number=13
+
+even number count=3
+odd number count:2
+
+sum of even digits: 14
+sum of odd digits: 4
+
+task 2:
+
+n=1593
+
+output:
+3951(single var)
+
+01.08.2026
+
+Step 1- Logic: Thinking through steps
+Step 2- Functions: Reusable blocks of code
+Step 3- Reusable code: Write once, use often
+
+What is BODMAS? (Order of Operations)
+
+1. BODMAS is a rule for the order in which maths operations happen
+2. It stands for
+	1. Brackets
+	2. Orders(powers or roots)
+	3. Division and Multiplication(Left to right)
+	4. Addition and Subtraction (left to right) 
+
+What is an algorithm?
+* An algorithm is a step-by-step set of instructions to solve a problem or complete a task.
+* In programming, it tells the computer what to do and in what order.
+* Analogy: It's like a recipe - clear steps from start to finish.
+
+Visualising Algorithms with Flowcharts
+
+Algorithm Can Be Visual Too
+
+* An algorithm isn't just written in code - it can be shown as a flowchart
+* A flowchart is like a map of the steps the computer follows
+* Each shape shows a different kind of action (start, input, output, end)
+
+Function
+=======
+
+What is a function?
+
+* A Function is a named set of instructions
+* It runs a specific task or solves a small part of a bigger problem
+* Think of it as a mini-program inside a program
+
+Why use a function?
+* Functions help avoid repeating the code
+* Instead of copying code again and again, call the function whenever needed
+* This makes code cleaner, easier to update, and easier to understand
+
+User-defined Function
+
+Prerequisite to learn user-defined functions or methods:
+=====================================================
+1. ()
+2. calling a function or method ---> zero or many times
+3. called function or method ---> only one time
+4. arguments or parameters ---> called function(datatype)
+				calling function(variables/value)
+5. void --> no return (don't use return keyword)
+6. return --> return is a must if you don't use void
+7.   ---> only mention at the last line of the called function
