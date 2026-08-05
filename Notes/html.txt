@@ -1,0 +1,14 @@
+open with live server shortcut key alt+l(o and c)
+list
+    Order list-ol
+    Unorder list-ul
+    definition list-dl
+type
+    1.type="I" - I II III IV
+    2.type="A" - A B C D
+    3.type=" " - square, circle, disc
+link
+
+table task:
+
+
