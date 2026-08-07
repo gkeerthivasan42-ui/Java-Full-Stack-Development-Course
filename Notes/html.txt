@@ -1,3 +1,4 @@
+04.08.2026
 open with live server shortcut key alt+l(o and c)
 list
     Order list-ol
@@ -11,4 +12,36 @@ link
 
 table task:
 
+05.08.2026
 
+form action="" provide the hyperlink
+placeholder inside the text in the box
+method get is show the webpage details and allow the data. get is default method.(web information, hyperlink show the details like user name, password)
+method post is secure the data does not share and show the data.
+normal <button> is allow create animation,color,bold text, font styles, extra
+<input type="button"> is does not allow the animation,color,bold text, font styles.extra
+<input type="reset"> clear the all data in the webpage.
+combobox or dropdown tags
+difference between combobox and radio button
+difference between button and sumbit button
+alt+z is line lap
+
+07.08.2026
+CSS:
+cascading style sheet
+use: web page excellent design in easy way
+
+invented by:W3C company.(World Wide Wen Consoritum)
+
+year:1996(level 1 dec 17)
+
+css created by Hakon Wium Lie and Bert Bos.
+
+three types of css:
+1.inline css - with in a tag
+2.internal css - head tag + whole single html program
+3.external css - head tag + one or more html program
+
+<!-- border-style:solid, dotted, dashed, double, groove, ridge, inset, outset, none, hidden;-->
+id attribute declear symbol of #
+class attribute declear symbol of .

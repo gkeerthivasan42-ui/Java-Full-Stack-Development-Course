@@ -479,3 +479,4 @@ Prerequisite to learn user-defined functions or methods:
 5. void --> no return (don't use return keyword)
 6. return --> return is a must if you don't use void
 7.   ---> only mention at the last line of the called function
+git add . and git add A as same operation
