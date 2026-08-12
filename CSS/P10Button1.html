@@ -1,0 +1,48 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+
+    button
+    {
+        font-size: 30px;
+        margin-right: 60px;
+        margin-top: 20px;
+        padding: 15px;
+        background-color: aquamarine;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+    }
+    #b1:hover
+    {
+        outline: 3px solid yellow;
+        border-radius: 0 25px 0 25px;
+    }
+     #b2:hover
+    {
+        outline: 3px solid pink;
+        border-radius: 25px 0 25px 0;/* 1. top left 2. top right 3. bottom right 4. bottom left*/
+    }
+    button:hover
+    {
+        cursor: pointer;
+        background-color: darkblue;
+        color: white;
+         outline: 3px dashed red;
+    }
+    </style>
+</head>
+<body>
+    <button id="b1">Home</button>
+    <button id="b2">About</button>
+    <button id="b3">Education</button>
+    <button id="b4">Skill</button>  
+    <button id="b5">Experience</button>
+    <button id="b6">Contect me</button>
+</body>
+</html>

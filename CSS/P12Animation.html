@@ -1,0 +1,52 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        div,img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: blue;
+            border: 10px dotted black;
+            position:relative;
+            animation-name: kalvi;
+            animation-timing-function: ease in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-direction: alternate;
+        }
+        @keyframes kalvi{
+            0%{
+                left: 0px;
+                top: 0px;
+            }
+            40%{
+                left: 500px;
+                top: 200px;
+                transform: rotateY(360deg);
+            }
+            70%{
+                left: 1000px;
+                top: 100px;
+                transform: rotate(100deg);
+            }
+            100%{
+                left: 1500px;
+                top: 300px;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align:center; color:black; font-size: 50pt;"> Hi...<br>bye...</h1>
+    </div>
+    <img src="/CSS/image/profile.jpg">
+</body>
+</html>
