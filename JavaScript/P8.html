@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result check</title>
+    <script type="text/javascript">
+        function ftotal(){
+            var n1=document.getElementById("t1").value;
+            var n2=document.getElementById("t2").value;
+            var tot=parseInt(n1)+parseInt(n2);
+            // alert("total:"+tot);
+           // document.write("<br> total:"+tot);
+            document.getElementById("res").innerHTML="Total:"+tot;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter 1st No.">
+    <br>
+    <input type="text" id="t2" placeholder="Enter 2nd No.">
+    <br>
+    <input type="button" value="find value" onclick="ftotal()">
+    <br>
+    <div id="res"></div>
+</body>
+</html>

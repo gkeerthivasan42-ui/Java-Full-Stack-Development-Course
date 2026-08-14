@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Even Number</title>
+    <script type="text/javascript">
+        function find()
+        {
+            var n=document.getElementById("n1").value;
+            var result=document.getElementById("res");
+            if(n%2==0)
+            result.innerHTML="<h1>"+n+" is a even number</h1>";
+            else
+            result.innerHTML="<h1>"+n+" is a odd number</h1>";
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="n1" placeholder="Enter a Number">
+    <br>
+    <input type="button" value="Answer" onclick="find()">
+    <br>
+    <div id="res"></div>
+</body>
+</html>
