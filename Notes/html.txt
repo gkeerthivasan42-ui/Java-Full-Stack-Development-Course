@@ -45,3 +45,102 @@ three types of css:
 <!-- border-style:solid, dotted, dashed, double, groove, ridge, inset, outset, none, hidden;-->
 id attribute declear symbol of #
 class attribute declear symbol of .
+
+10.08.2026
+title: position
+type:
+    static ---->default
+        *)seprate place
+        *)scrolling: yes
+        *)outside screen: yes
+        *)left, right,top,bottom:no
+    absoluate
+        *)no seprate place
+        *)scrolling: yes
+        *)outside screen: yes
+        *)left, right,top,bottom:yes
+    fixed
+        *)no seprate place
+        *)scrolling: no
+        *)outside screen: no
+        *)left, right,top,bottom:yes
+    relative
+        *)seprate place: yes
+        *)scrolling: yes
+        *)outside screen: yes 
+        *)left, right,top,bottom:yes (but previous tag)
+    sticky
+        *)seprate place: yes
+        *)scrolling: yes
+        *)outside screen: no
+        *)left, right,top,bottom:yes
+
+11.08.2026
+inline, block
+
+12.08.2026
+JAVA SCRIPT:
+============
+* in 1995 first introduced by Brendan Eich
+* starting name: livescript
+* developed ECMAscript-262(organization approved by ISO)
+* only netscape navigator 2.0 first worked
+* all browsers worked from 1996
+* javascript extension:js
+* main use: directly interact with html codes
+* java and javascript are different
+* joining operator + or concatenation operator
+* javascript is a interpreter(line by line error check)
+* javascript is a loosly type checked language.
+
+var=10; ----> integer
+var b=10.20; ----->float
+var c="text0123"; ---->string
+
+general format:
+===============
+
+<html>
+<head>
+<script type="text/javascript">
+.........
+</script>
+<head>
+<body>
+................
+</body>
+</html>
+
+document.write(""); - webpage or browsers
+console.log(""); - f12 is console
+
+different between var, let, Consant
+var & let ----> we can change the value.
+const ----->we can't change the value.
+
+var: ---------> global
+let & const: ------> local scope
+parseInt ---> text convert into integer
+parsefloat ---> text convert into float
+
+13.08.2026
+
+innerHTML:
+===========
+
+purpose : do not hide html form elements.
+
+syntax:
+
+document.getElementById
+("id").innerHTML=youroutput;
+
+HW:
+1. given no. is even or odd
+2. given no. is +ve/ -ve / 0
+3. given year is leap or not
+
+empty elements or space shortcut alt+0160
+<pre></pre> space tag
+
+14.08.2026
