@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case(onblur)</title>
+    <script type="text/javascript">
+        function show()
+        {
+            var sname=document.getElementById("t1").value;
+            switch(sname){
+                case "keerthi":
+                    document.getElementById("myimg").src="./img/profile.jpg";
+                    break;
+                case "vasan":
+                    document.getElementById("myimg").src="./img/profile2.jpg";
+                    break;
+                case "GKV":
+                    document.getElementById("myimg").src="./img/GKV.jpg";
+                    break;
+                case "Nature":
+                    document.getElementById("myimg").src="./img/Nature.jpg";
+                    break;
+                default:
+                    document.getElementById("myimg").src="./img/eyeclose.png";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input id="t1" type="text" placeholder="Enter a Name:" onblur="show()">
+    <br> 
+    <img src="" id="myimg" width="80%" align="center">
+</body>
+</html>

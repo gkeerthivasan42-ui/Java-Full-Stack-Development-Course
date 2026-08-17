@@ -144,3 +144,51 @@ empty elements or space shortcut alt+0160
 <pre></pre> space tag
 
 14.08.2026
+
+ctrl+/ is command remove/show
+
+17.08.2026
+Tab is use to moving outside cursor
+while loop:
+==========
+
+initial;
+while(condition)
+{
+    statement;
+    increment/decrement; // ++ -- * /
+}
+
+ex:
+var i=1;
+while(i<=10)
+{
+    i++;
+    d.w(i);
+}
+
+output:
+    2 3 4 5 ......... 11
+
+HW:
+for loop:
+========
+1. find given no. is prime or not a prime
+while loop:
+==========
+2. sum of digits
+ex:
+    1234
+output:10
+
+3. display even numbers
+ex:
+    1234
+output: 24
+4. sum of even numbers
+ex:
+    1234
+output: 6
+
+array:
+

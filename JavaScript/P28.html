@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt runtime</title>
+    <script type="text/javascript">
+        function Show(){
+            var size=parseInt(document.getElementById("t1").value);
+            var arr=new Array(size);
+            for(i=0;i<size;i++)
+            {
+                arr[i]=prompt("enter array value at index:"+i);
+            }
+            for(var i=0;i<size;i++)
+            {
+            document.write("<br> value "+i+" = "+arr[i]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter Array Size"><br>
+    <button onclick="Show()">Array Prompt Demo</button>
+</body>
+</html>
