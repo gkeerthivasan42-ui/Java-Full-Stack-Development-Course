@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <script type="text/javascript">
+        function dis(){
+            var data=document.getElementById("t1").value;
+            var re=/^[a-zA-Z]{4,}$/; // syntax 
+            if(data.match(re))
+            alert("valid");
+        else
+        alert("invalid format");
+        }
+    </script>
+</head>
+<body>
+    <h1><center>Regular expression: 3. Name validation(only caps+small,min:4,max:inifinte)</center></h1>
+    <input type="text" id="t1" placeholder="Enter Name"><br>
+    <input type="button" value="validate" onclick="dis()"><br>
+    <div id="res"></div>
+</body>
+</html>
