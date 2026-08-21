@@ -1,6 +1,98 @@
 import React from 'react'
 
 function App() {
+  var stud={
+    sno:1,
+    sname:'Keerthivasan G',
+    marks:{
+      tamil:100,
+      english:100,
+      maths:101,
+      science:99,
+      social:100
+    },
+    rank:1,
+    result:"PASS"
+  }
+  return (
+    <div>
+      <h1>JSON</h1>
+      <h2>Student number:{stud.sno}</h2>
+      <h2>Student name:{stud.sname}</h2>
+      <h2>Student tamil mark:{stud.marks["tamil"]}</h2>
+      <h2>Student english mark:{stud.marks["english"]}</h2>
+      <h2>Student maths mark:{stud.marks.maths}</h2>
+      <h2>Student science mark:{stud.marks.science}</h2>
+      <h2>Student social mark:{stud.marks["social"]}</h2>
+      <h2>Student Rank:{stud.rank}</h2>
+      <h2>Student Result:{stud.result}</h2>
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+function App() {
+  var stud={
+    sno:1001,
+    sname:'Keerthivasan G',
+    mark:100,
+    rank:1,
+    result:"pass"
+  }
+  return (
+    <div>
+      <h1>JSON</h1>
+      <h2>Student number:{stud.sno}</h2>
+      <h2>Student name:{stud.sname}</h2>
+      <h2>Student Mark:{stud.mark}</h2>
+      <h2>Student Rank:{stud.rank}</h2>
+      <h2>Student Result:{stud.result}</h2>
+    </div>
+  )
+}
+
+export default App
+
+
+
+/*import React from 'react'
+function App() {
+  var arr=[11,22,33,44,55,66,77,88,99];
+  var big=arr[0];
+  return (
+    <div>
+      
+      <h1>Array Demo</h1>
+      {arr.map((item)=>item)}
+      <br></br>
+      {arr.map((item)=><>{item} </>)}
+      {arr.map((item)=><><br></br>{item}</>)}
+
+      <ol type='I'>
+      {arr.map((v)=><li>{v}</li>)}
+      <h1>biggest Number</h1>
+      </ol>
+
+      <div style={{display:"none"}}>
+      {arr.map((v)=><>{big<v && <>{big=v}</>}</>)}
+      </div>
+
+      <h1>biggest number: {big}</h1>
+
+    </div>
+  )
+}
+
+export default App
+
+
+
+/*import React from 'react'
+
+function App() {
   var arr=[11,22,33,44,55,66]
   return (
     <div>
