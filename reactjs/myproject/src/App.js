@@ -1,5 +1,121 @@
 import React from 'react'
 
+function App(props) {
+  var arr=[]
+  for(var k in props.data)
+  {
+    arr.push(k)
+  }
+
+  return (
+    <div>
+      <h1>Json with Array handling and also check null</h1>
+      <h1>Student Setails</h1>
+      <h2>Roll No.:{props.data.rno}</h2>
+      <h2>Student Name: {props.data.sname}</h2>
+      <h2>Tamil marks:{props.data.marks[0]}</h2>
+      <h2>English marks:{props.data.marks[1]}</h2>
+      <h2>Maths marks:{props.data.marks[2]}</h2>
+      <h2>Result:{(props.data.marks[0]>34) && (props.data.marks[1]>34) && (props.data.marks[2]>34)?"PASS":"FAIL"}</h2>
+
+      <h1>===============additional(smart way)===========================</h1>
+      {arr.map((v)=><h2>{v}---&gt; {(props.data[v]===true && "PASS") || (props.data[v]===false && "FAIL") || props.data[v]}</h2>)}
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+
+export default function App(props) {
+  
+  var arr=[]
+  for(var k in props.data)
+  {
+    arr.push(k)
+  }
+
+  return (
+    <div>
+      <h1>props using JSON data</h1>
+
+      <h2>Roll No: {props.data.rno}</h2>
+      <h2>Name: {props.data.sname}</h2>
+      <h2>Mark: {props.data.mark}</h2>
+      <h2>Result: {props.data.mark>=35?"pass":"fail"}</h2>
+      <h2>is eligible to study: {props.data.iseligible?"eligible":"not eligible"}</h2>
+
+      <br></br>
+      <h2>============================================================</h2>
+      {arr.map((v)=><h2>{v}----&gt; {props.data[v]}</h2>)}
+      <h2>============================================================</h2>
+      {arr.map((v)=><h2>{v}----&lt; {props.data[v]}</h2>)}
+      <h2>======================extra Learner========================</h2>
+      {arr.map((v)=><h2>{v}---- {(props.data[v]===true && "Eligible") || (props.data[v]===false && "Not Eligible") || props.data[v]}</h2>)}
+      <h2>============================================================</h2>
+      {arr.map((v)=><h2>{v}---- {props.data[v]===true?"Eligible":props.data[v]}</h2>)}
+    </div>
+  )
+}
+
+/*import React from 'react'
+
+function App(props) {
+  return (
+    <div>
+      <h1>Student Details:</h1><br></br>
+      <h2>Roll No.: {props.data.rno}</h2>
+      <h2>Student Name: {props.data.sname}</h2>
+      <h2>Student Mark: {props.data.mark}</h2>
+      <h2>Student Result: {props.data.result}</h2>
+      <h2>Student Eligiblity: {props.data.iseligible}</h2>
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+
+function App(props) {
+  return (
+    <div>
+      <h1>Props using Array</h1><br></br>
+      Tamil Mark: {props.data[0]}<br></br>
+      English Mark: {props.data[1]}<br></br>
+      Maths Mark: {props.data[2]}<br></br>
+      Science Mark: {props.data[3]}<br></br>
+      Social Science Mark: {props.data[4]}<br></br>
+
+      {props.data.map((item,index)=><><br></br>mark:{index} = {item}</>)}
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+
+function App(props) {
+  return (
+    <div>
+      <h1>props: properties</h1>
+      <h2>share data from one Component to another Component</h2>
+      <h2>Your Name: {props.data}</h2>
+    </div>
+  )
+}
+
+export default App
+
+
+
+/*import React from 'react'
+
 function App() {
   var stud={
     sno:1,
