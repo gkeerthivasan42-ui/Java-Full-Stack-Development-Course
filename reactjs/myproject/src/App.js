@@ -1,4 +1,284 @@
 import React from 'react'
+import axios from 'axios'
+import { useState } from 'react'
+function App() {
+  const[city,setCity]=useState("Salem")
+  const[result,setResult]=useState(null)
+
+  const cityFun=(Event)=>{
+    setCity(Event.target.value)
+  }
+  const show=()=>{
+    const apiurl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5b866b22d1c4ae4d8113a8a6af8ef186`
+    //console.log(apiurl)
+    axios.get(apiurl).then((response)=>{
+      setResult(response.data)
+      console.log(result)
+    })
+  }
+  return (
+    <div>
+      <h1><center>Weather Report all over world</center></h1>
+      <h1><center>by using city name</center></h1>
+      <h2><center>Developed by G.Keerthivasan B.E.,</center></h2>
+      <br></br>
+      <hr size="10" color='green'></hr>
+      <input type="text" value={city} onChange={(e)=>cityFun(e)} name="city" placeholder='Enter City Name'></input>
+      <input type='button' value="Find Weather Report" onClick={show}></input>
+      <hr size="10" color="blue"></hr>
+    </div>
+  )
+}
+
+export default App
+/*import React from 'react'
+
+function App() {
+  let dis=()=>{
+    var tags=document.getElementsByTagName("input");
+    var size=tags.length;
+    document.getElementById("res").innerHTML="count of textbox"+size;
+    var sum=0;
+    for(var i=0;i<size;i++)
+    {
+      sum=sum+parseInt(tags[i].value);
+    }
+    document.getElementById("r1").innerHTML=sum+" is total";
+  }
+  return (
+    <div>
+      <input type='text' placeholder='Enter Number 1'></input><br></br>
+      <input type='text' placeholder='Enter Number 2'></input><br></br>
+      <input type='text' placeholder='Enter Number 3'></input><br></br>
+      <input type='text' placeholder='Enter Number 4'></input><br></br>
+      <input type='text' placeholder='Enter Number 5'></input><br></br>
+      <button onClick={dis}>Answer</button>
+      <div id='r1'></div>
+      <div id='res'></div>
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+
+function App() {
+
+  let dis = () => {
+    var tags = document.getElementsByTagName("input")
+    var size = tags.length
+
+    document.getElementById("res").innerHTML =
+      "Count of textbox: " + size
+  }
+
+  return (
+    <div>
+      <h1>Textbox Count</h1>
+
+      <input type="text" placeholder="Enter Mark 1" /><br />
+      <input type="text" placeholder="Enter Mark 2" /><br />
+      <input type="text" placeholder="Enter Mark 3" /><br />
+      <input type="text" placeholder="Enter Mark 4" /><br />
+      <input type="text" placeholder="Enter Mark 5" /><br />
+
+      <button onClick={dis}>Count Textboxes</button>
+
+      <div id="res"></div>
+    </div>
+  )
+}
+
+export default App
+
+/*import React from 'react'
+
+function App() {
+  let dis=()=>{
+    var n1=parseInt(document.getElementById("m1").value);
+    var n2=parseInt(document.getElementById("m2").value);
+    var n3=parseInt(document.getElementById("m3").value);
+    var n4=parseInt(document.getElementById("m4").value);
+    var n5=parseInt(document.getElementById("m5").value);
+    document.getElementById("res").innerHTML=n1+n2+n3+n4+n5;
+  }
+  return (
+    <div>
+      <input type='text' id='m1' placeholder='Enter Mark 1'></input><br></br>
+      <input type='text' id='m2' placeholder='Enter Mark 2'></input><br></br>
+      <input type='text' id='m3' placeholder='Enter Mark 3'></input><br></br>
+      <input type='text' id='m4' placeholder='Enter Mark 4'></input><br></br>
+      <input type='text' id='m5' placeholder='Enter Mark 5'></input><br></br>
+      <button onClick={dis}>Find Total</button>
+      <div id='res'></div>
+    </div>
+  )
+}
+
+export default App
+
+/*import React from 'react'
+
+function App() {
+  const dis=(Event)=>{
+    document.getElementById("res").innerHTML="You are corrently working "+Event.target.type;
+  }
+  return (
+    <div>
+      <input type='text' onChange={dis}></input><br></br>
+      <input type='number' onChange={dis}></input><br></br>
+      <input type='password' onChange={dis}></input><br></br>
+      <input type='radio' onChange={dis} name='g'></input>male
+      <input type='radio' onChange={dis} name='g'></input>female<br></br>
+      <input type='checkbox' onChange={dis}></input>c
+      <input type='checkbox' onChange={dis}></input>c++
+      <input type='checkbox' onChange={dis}></input>Java<br></br>
+      <div id='res'></div>
+    </div>
+  )
+}
+
+export default App
+
+
+
+/*import React from 'react'
+
+function App() {
+  const dis=(Event)=>{
+    document.getElementById("res").innerHTML=Event.target.id+"...typing";
+  }
+  return (
+    <div>
+      <input type='text' onChange={dis} id='textbox 1' placeholder='textbox 1'></input><br></br>
+      <input type='text' onChange={dis} id='textbox 2' placeholder='textbox 2'></input><br></br>
+      <input type='text' onChange={dis} id='textbox 3' placeholder='textbox 3'></input><br></br>
+      <input type='text' onChange={dis} id='textbox 4' placeholder='textbox 4'></input><br></br>
+      <input type='text' onChange={dis} id='textbox 5' placeholder='textbox 5'></input><br></br>
+      <div id='res'></div>
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+
+function App() {
+  const dis=()=>{
+    var a=parseInt(document.getElementById("t1").value);
+    var b=parseInt(document.getElementById("t2").value);
+    var c=a+b;
+    document.getElementById("res").innerHTML="Total:"+c;
+  }
+  return (
+    <div>
+      <input type='text' id='t1' placeholder='Enter Number 1'></input>
+      <input type='text' id='t2' placeholder='Enter Number 2'></input>
+      <br></br>
+      <input type='button' onClick={dis} value="answer"></input>
+      <div id='res'></div>
+    </div>
+  )
+}
+
+export default App
+
+
+/*import React from 'react'
+
+function App() {
+  const dis1=()=>{
+    document.getElementById("res").innerHTML="Cursor Outside textbox";
+    document.getElementById("t1").style.backgroundColor="pink";
+  }
+   const dis2=()=>{
+    document.getElementById("res").innerHTML="Cursor Inside textbox";
+    document.getElementById("t1").style.backgroundColor="lightgreen";
+  }
+  return (
+    <div>
+      <h1>Event onBlur and onFocus:</h1>
+      <input type='text' id='t1' placeholder='Enter Your Text' onBlur={dis1} onFocus={dis2}></input>
+      <div id="res"></div>
+    </div>
+  )
+}
+
+export default App
+
+
+
+/*import React from 'react'
+
+function App() {
+  const dis=(Event)=>{
+    var data=Event.target.value;
+    document.getElementById("res").innerHTML=data+"...typing"
+  }
+  return (
+    <div>
+      <h1>React Events</h1>
+      <input type="text" onChange={dis} placeholder='Enter Text'></input><br></br>
+      <div id="res"></div>
+    </div>
+  )
+}
+
+export default App
+
+
+
+/*import React from 'react'
+
+function App() {
+  return (
+    <form>
+      <h1>React form</h1>
+      <input type='text' id='1' placeholder='Enter Mark 1'></input><br></br>
+      <input type='text' id='2' placeholder='Enter Mark 2'></input><br></br>
+      <input type='text' id='3' placeholder='Enter Mark 3'></input><br></br>
+      <input type='text' id='4' placeholder='Enter Mark 4'></input><br></br>
+      <input type='text' id='5' placeholder='Enter Mark 5'></input><br></br>
+      <input type='password' id='pw' placeholder='Enter Password'></input><br></br>
+      <label>Select gender:</label>
+      <input type='radio' id='g1' name='gen'></input>male
+      <input type='radio' id='g1' name='gen'></input>female
+      <input type='radio' id='g1' name='gen'></input>other<br></br>
+      <label>Select Course:</label>
+      <input type='checkbox' id='c1' ></input>C
+      <input type='checkbox' id='c2' ></input>C++
+      <input type='checkbox' id='c3' ></input>Java
+      <input type='checkbox' id='c4' ></input>Python
+      <input type='checkbox' id='c5' ></input>mySQL
+      <input type='checkbox' id='c6' ></input>HTML
+      <input type='checkbox' id='c7' ></input>CSS
+      <input type='checkbox' id='c8' ></input>JavaScript<br></br>
+      <label>Select Color:</label>
+      <input type='color' id='col'></input><br></br>
+      <label>Select Date:</label>
+      <input type='date' id='dat'></input><br></br>
+      <label>Select Time:</label>
+      <input type='time' id='ti'></input><br></br>
+      <input type='number' id='nm' placeholder='Enter Number'></input><br></br>
+       <label>Upload File::</label>
+      <input type='file' id='id'></input><br></br>
+      <input type='button' value="clickme"></input>
+      <input type='submit' value="sumbit button"></input>
+      <input type='reset' value="clear"></input>
+      <button>clickit</button>
+    </form>
+  )
+}
+
+export default App
+
+
+
+/*import React from 'react'
 
 function App(props) {
   var arr=[]
@@ -6,6 +286,7 @@ function App(props) {
   {
     arr.push(k)
   }
+  //console.log(arr)
 
   return (
     <div>
@@ -16,10 +297,13 @@ function App(props) {
       <h2>Tamil marks:{props.data.marks[0]}</h2>
       <h2>English marks:{props.data.marks[1]}</h2>
       <h2>Maths marks:{props.data.marks[2]}</h2>
-      <h2>Result:{(props.data.marks[0]>34) && (props.data.marks[1]>34) && (props.data.marks[2]>34)?"PASS":"FAIL"}</h2>
+      <h2>Result:{(props.data.marks[0]>34) && (props.data.marks[1]>34) && (props.data.marks[2]>34)?props.data.result="PASS":props.data.result="FAIL"}</h2>
 
       <h1>===============additional(smart way)===========================</h1>
-      {arr.map((v)=><h2>{v}---&gt; {(props.data[v]===true && "PASS") || (props.data[v]===false && "FAIL") || props.data[v]}</h2>)}
+      {arr.map((item)=><><br></br>{item}----&gt;{props.data[item]}</>)}
+
+      <h1>===============additional(smart way)===========================</h1>
+      {arr.map((item)=><><br></br>{item}----&gt;{(item==="marks" && props.data[item].map((v,index)=><><br></br>mark:{index+1}---{v}</>)) || props.data[item]}</>)}
     </div>
   )
 }
