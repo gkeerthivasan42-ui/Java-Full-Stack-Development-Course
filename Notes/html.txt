@@ -199,3 +199,399 @@ Array Syntax:
 array index always start from:0
 inbuild:
 arrayvariablename.length
+
+18.08.2026
+===========
+hw:
+1. find highest number using array
+2. sum of array
+3. sum of even number in array
+4. count the odd number in an array
+5. ascending Order
+
+nested loop
+===========
+
+for(var i=1;i<=5;i++)
+{
+    for(var j=1;j<=5;j++)
+    {
+        document.write(" "+i+j);
+    }
+    document.write("<br>");
+}
+
+output:
+=======
+11 12 13 14 15
+21 22 23 24 25
+31 32 33 34 35
+41 42 43 44 45
+51 52 53 54 55
+
+normal function:
+================
+function functionname()
+{
+    ................
+}
+
+arrow function:
+===============
+var/let/const function=()=>{
+
+}
+
+ex:
+var dis=()=>{
+
+}
+
+arrgument pass
+==============
+ex:
+var dis=(a,b,c)=>{
+    tot=a+b+c;
+    alert(tot);
+}
+
+react install(command prompt)
+step 1: cd react
+step 2: npm install -g create-react-app(policy error)
+step 3: npx create-react-app . or npx create-react-app myproject
+step 4: cd myproject
+step 5: npm start
+step 6: ctrl c stop
+
+19.08.2026
+
+react
+======
+1. index.html 2. index.js 3. App.js  commonly used file
+
+npm - Node Package Manager
+npx - Node Package Excuter
+
+two type of component
+1. function component
+2. class component
+
+1. function component
+=====================
+ex:
+function App()
+{
+return(
+  <h1>welcome to react js</h1>
+)
+}
+export default App;
+
+group of taggs:<></>
+==============
+ex:
+function App()
+{
+return(
+  <>
+  <h1>welcome to react js</h1>
+  <h2>welcome to react js</h2>
+  <h3>welcome to react js</h3>
+  </>
+)
+}
+
+2. class component
+==================
+import React from "react";
+class App extends React.Component
+{
+  render(){
+    return(
+      <>
+        <h1>welcome to react js</h1>
+        <h2>welcome to react js</h2>
+        <h6>welcome to react js</h6>
+      </>
+    )
+  }
+}
+export default App;
+
+React Expression:
+=================
+arrow function:
+var App=()=>{
+  var a=10
+  var b=20
+  var c=30
+  return(
+    <>
+    <h1>Welcome to React Expression</h1>
+    <h2>A value:{a}</h2> //does not declear the var const let inside the return, only declear return above
+    <h2>B value:{b}</h2>
+    <h2>C value:{c}</h2>
+    <h2>Total values:{a+b+c}</h2>
+    </>
+  )
+}
+export default App;
+
+short cut key rfc  or rfce 
+
+import React from 'react'
+
+control Statement:
+==================
+1. Simple If Statement:
+
+Example:
+function App() {
+  var mark=100;
+  return (
+    <div>
+      <h1>1. Simple If Statement</h1>
+      <h2>Mark : {mark}</h2>
+      <h2>Result:</h2>
+      <h2>{mark>34 && "PASS"}</h2>
+      <h2>{mark<=34 && "FAIL"}</h2>   
+    </div>
+  )
+}
+
+export default App
+
+2.if else Statement
+
+Example:
+
+function App() {
+  var mark=100;
+  return (
+    <div>
+      <h1>2.if else Statement</h1>
+      <h2>Mark : {mark}</h2>
+      <h2>Result:</h2>
+      <h2>{(mark>34 && "PASS") || "FAIL"}</h2>   
+    </div>
+  )
+}
+
+export default App
+
+Example1:
+/*import React from 'react'
+
+function App() {
+  var n1=100;
+  var n2=1001;
+  return (
+    <div>
+      <h1>greatest among 2 numbers using if else</h1>
+
+      <h2>number 1: {n1}</h2>
+      <h2>number 2: {n2}</h2>
+    <h2>{(n1>n2 && " Number 1 is biggest") || "Number 2 is biggest"}</h2>
+    </div>
+  )
+}
+export default App
+
+3. if else if Statement or else if ladder
+
+Example:
+import React from 'react'
+
+function App() {
+  var n=0;
+  return (
+    <div>
+      <h1>3. if else if Statement or else if ladder</h1>
+      <h2>{n} is {(n>0 && "+ve") || (n<0 && "-ve")|| "zero"}</h2>
+    </div>
+  )
+}
+
+export default App
+
+4.nested if Statement
+
+Example:
+function App() {
+  var avg=90;
+  var res="fail";
+  return (
+    <div>
+      <h1>4. Nested if</h1>
+      <h1>Grade System:</h1>
+      <h2>
+        { 
+        (res==="pass" && ((avg>=85 && "outstanding") || 
+        (avg>=75 && "excellent")||
+        (avg>=65 && "very good") || 
+        (avg>=55 && "good") || 
+        "fair")) || "no grade"
+        }
+      </h2>
+    </div>
+  )
+}
+
+Array:
+=====
+
+20.08.2026
+=========
+
+json:
+  javascript object notation
+
+two types:
+  1) normalized json
+  2) denormalized or embed json
+
+1) normalized
+  var stud={
+    rno:47,
+    sname:"Keerthi",
+    mark:30,
+    grade:"b",
+    result:"PASS"
+  }
+
+2) denormalized
+var stud={
+  rno:1991,
+  sname:"Keerthi",
+  mark:{
+    tamil:100,
+    english:100,
+    maths:100,
+    science:100,
+    social:100
+  },
+  rank:1
+}
+
+purpose:
+  *) light weight process
+  *) fast access
+  *) no sql
+  *) paragraph format
+  *) unstructured format
+
+  HW:
+  input: i love javascript program
+  output: highest length of text:
+          javascript
+
+1. git add .
+1.1 git status - check the update file
+2. git commit -m "massage"
+3. git push
+
+
+21.08.2026
+
+data passing one proparty to another
+share data from one Component to another Component using props
+
+index.js to App.js
+
+1. index.js
+============
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+var sname="KEERTHIVASAN G"
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App data={sname}/>
+  </React.StrictMode>
+);
+
+2. App.js
+=========
+import React from 'react'
+
+function App(props) {
+  return (
+    <div>
+      <h1>props: properties</h1>
+      <h2>share data from one Component to another Component</h2>
+      <h2>Your Name: {props.data}</h2>
+    </div>
+  )
+}
+
+export default App
+
+output:
+======
+
+props: properties
+share data from one Component to another Component
+Your Name: KEERTHIVASAN G
+
+rfce package is doesn't show install es7 from the extension 
+
+&gt; - < greater than symbol
+&lt; - < Less than symbol
+
+22.08.2026
+
+24.08.2026
+=========
+open weather api
+
+API:
+====
+
+postman installation
+
+npm install axios
+
+what is the purpose of using useState Hook?
+  ---> Runtime data Management
+  ---> automatically update DOM when state changes.
+
+  notes:
+  step 1:
+  header file:
+  import {useState} from 'react'
+
+  step 2:
+  declearation
+
+  const [var,setVar]=useState("default value)
+  ex:
+  const [city,setCity]=useState("Salem")
+
+  step 3:
+
+  <input type="text"  value={city} onChange={(e)=>dis(e)}></input>
+
+  step 4:
+  change the state: (important)
+  setCity("yourvalue")
+
+  ex:
+    const dis=(Event)=>{
+      setCity(Event.target.value)
+    }
+
+axios use maintain the restful api 
+
+get-
+put-
+post-
+delete-
+
+catch-
+finally-
+then-
