@@ -8,12 +8,15 @@ function App() {
   const cityFun=(Event)=>{
     setCity(Event.target.value)
   }
-  const show=()=>{
+  const show=async()=>{
     const apiurl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5b866b22d1c4ae4d8113a8a6af8ef186`
     //console.log(apiurl)
-    axios.get(apiurl).then((response)=>{
+    await axios.get(apiurl).then((response)=>{
       setResult(response.data)
       console.log(result)
+    }).catch((err)=>{
+      setResult(err.response.data)
+      console.log(err.response.data)
     })
   }
   return (
@@ -22,10 +25,18 @@ function App() {
       <h1><center>by using city name</center></h1>
       <h2><center>Developed by G.Keerthivasan B.E.,</center></h2>
       <br></br>
-      <hr size="10" color='green'></hr>
+      <hr size="10" color='orange'></hr>
       <input type="text" value={city} onChange={(e)=>cityFun(e)} name="city" placeholder='Enter City Name'></input>
       <input type='button' value="Find Weather Report" onClick={show}></input>
-      <hr size="10" color="blue"></hr>
+      <hr size="10" color="green"></hr>
+      {result!==null && result.cod===200 && <><h2>Country & City: {result.sys.country} & {result.name}</h2></>}
+      {result!==null && result.cod===200 && <><h2>Main Report: {result.weather[0].main}</h2></>}
+      {result!==null && result.cod===200 && <><h2>Description: {result.weather[0].description}</h2></>}
+      {result!==null && result.cod===200 && <><h2>Wind speed: {result.wind.speed}</h2></>}
+      {result!==null && result.cod===200 && <><h2>Temperature: {result.main.temp}</h2></>}
+      {result!==null && result.cod===200 && <><h2>Humidity: {result.main.humidity}</h2></>}
+      {result!==null && result.cod===200 && <><h2>Co-ord(lat - lon): {result.coord.lat} - {result.coord.lon}</h2></>}
+      {result!==null && result.cod==="404" && <font color="red" size='5'><b>{result.message}</b></font>}
     </div>
   )
 }
