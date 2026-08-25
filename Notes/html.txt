@@ -267,6 +267,8 @@ step 6: ctrl c stop
 
 react
 ======
+{}-->Expression
+
 1. index.html 2. index.js 3. App.js  commonly used file
 
 npm - Node Package Manager
@@ -552,6 +554,15 @@ open weather api
 API:
 ====
 
+open weather api
+
+API key: 5b866b22d1c4ae4d8113a8a6af8ef186
+
+api format:
+https://api.openweathermap.org/data/2.5/weather?q=karur&appid=5b866b22d1c4ae4d8113a8a6af8ef186
+
+npm install axios
+
 postman installation
 
 npm install axios
@@ -595,3 +606,14 @@ delete-
 catch-
 finally-
 then-
+
+25.08.2026
+
+async - 
+await -
+
+
+html status codes:
+
+200 - successed(integer)
+"404" - fail(string)
