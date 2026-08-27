@@ -637,5 +637,133 @@ step 9: npm run deploy - command
 
 27.08.2026
 
-MangoDB:
+MangoDB:(smilar to json,api,reactjs) (JSON===paragraph===document)
 ========
+1. MangoDB Download (859mb) and install
+2. MongoDB shell download (62.2mb) and install is path:(C:\Users\keert\AppData\Local\Programs\mongosh\) then copy of the file mongosh
+3. copy the mongosh into program file MangoDB folder paste mongosh
+4. copy the current folder path insert to this pc and create the environmental path
+introduuction to MangoDB (json) python(dictionary)
+========================
+
+MangoDB is an open source, document oriented(paragraph format)
+database that stores data in from of document (key and value pairs)
+
+document based example:
+=======================
+var stud={
+  rno:1001
+  name:"Keerthi",     //field:value
+  age:23,
+  website:"www.Keerthi.com",
+  hobbies: ["Movies","sports","singing"]
+}
+
+Nested Json:
+===========
+var emp:{
+  eno:1,
+  ename:'KEERTHIVASAN G',
+  esal:1000000.00,
+  desig:"Software Engineer",
+  qual:"B.E"
+  prevemplocation:{city:'Salem',city:'chennai',city:'Covai'}
+}
+this is a JSON like structure.
+where data is stored in form of key and value pairs.
+
+History of MangoDB:
+===================
+MangoDB was created by Eliot and Dwight in 2007,
+when they faced scalability issues.
+while working with relational database.
+
+the organization that developed MangoDB was originally known as 10gen.
+
+In Feb 2009, they changed their business model and released MangoDB as an open source project.
+
+the organization changed its name in 2013 and now know as MangoDB Inc.
+
+Features of MangoDB:
+===================
+1. MangoDB provides high performance.
+Most of the operations in the MangoDB are faster compared to relational databases.
+2. MangoDB provides auto replication features.
+that allow you to quickly recover data in case of a failure
+3. Horizontal scaling is possible in MangoDB because of sharing.
+sharding is partitioning of data and placing it on multiple machines in such a way that the order of the data is preserved.
+
+How to create db?   //collection==table
+
+-----> use yourdbname
+
+ex:
+
+test> use nmvnjsd
+
+===============================
+how to insert sample data?
+
+mnvnjsd>db.collectionname.insertOne({})
+
+ex:
+nmvnjsd>db.student.insertOne({rno:1001,sname:"Keerthi",mark:98})
+
+insert 10 records
+=================================
+how to view data from collections?
+
+nmvnjsd>db.student.find()
+
+===================================
+how to view all the database?
+
+>show dbs
+
+==================================
+how to view all collection from a db?
+
+>show collections
+
+==================================
+how to change one db to another db?
+
+>use olddbname
+
+=================================
+
+ATS - Automatic Tracking System
+
+=================================
+example:
+
+>mongosh
+>usd jsd
+>db.student.insertOne({rno:1,sname:"Keerthi",mark:100})
+>db.student.insertOne({rno:2,sname:"Hema",mark:100})
+>db.student.find()
+>db.login.insertOne(user:"Keerthi",pwd:"@Keerthi2003")
+>db.login.insertOne(user:"Hema",pwd:"@Hema2003")
+>db.login.find()
+>show dbs
+>show collections
+>db.login.deleteOne({user:"Hema"}) //delete
+>db.login.find()  // show remaining data
+>db.login.deleteMany({}) // delete all data collection
+>db.login.find() // no data
+>db.student.updateOne({sname:"Hema"},{$set:{mark:101}}) //udate mark
+>db.student.find() // hema mark is updated 100 to 101
+>db.student.updateMany({mark:{$gt:49}},{$set:{result:"Pass"}}) // gt: greater then
+>db.student.find()
+>db.student.updateMany({mark:{$lte:49}},{$set:{result:"Pass"}}) // lte: less than or equal to
+>db.student.find()
+>db.student.find().sort({sname:1}) // albhabetic order name
+>db.student.find().sort({sname:-1}) // reverse albhabetic order name
+>db.student.find({mark:{$eq:100}}) // eq: equal to
+>db.student.find({mark:{$ne:100}}) // ne: not equal to
+>db.student.find({mark:{$gte:100}}) // gte: greater than or equal to
+>db.student.find({mark:{$lt:100}}) // lt: less than
+>db.student.find({}{rno:1,sname:1}) //only show rno and sname
+=============================================================
+>db.student.find({},{-id:0,rno:1,sname:1,result:1})
+=============================================================
