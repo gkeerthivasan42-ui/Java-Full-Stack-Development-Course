@@ -620,17 +620,22 @@ html status codes:
 
 deployment:(live)
 step 1: change file direction like,(cd reactjs\myproject)
-step 2: npm install gh-pages --save-dev
+step 2: npm install gh-pages --save-dev - command
 step 3: click open package.json file(VS code) after go to github 
 step 4: after go to github find project copy the link
 step 5: delete the tree and main (/tree/main) from the line ("https://github.com/gkeerthivasan42-ui/Java-Full-Stack-Development-Course/tree/main/reactjs/myproject",)
 step 6: package.json add "homepage": "https://github.com/gkeerthivasan42-ui/Java-Full-Stack-Development-Course/reactjs/myproject",
 step 7: next go to package.json go to section ("scripts") add this one "predeploy":"npm run build", then this one "deploy":"gh-pages -d build",
 step 8: go to command prompt or terminal npm run deploy
-step 9: npm run deploy
+step 9: npm run deploy - command
 
 
 "script":{
   "predeploy":"npm run build",
   "deploy":"gh-pages -d build"
 }
+
+27.08.2026
+
+MangoDB:
+========
