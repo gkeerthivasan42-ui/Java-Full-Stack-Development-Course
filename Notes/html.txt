@@ -767,3 +767,40 @@ example:
 =============================================================
 >db.student.find({},{-id:0,rno:1,sname:1,result:1})
 =============================================================
+
+>exit
+
+
+28.08.2026
+==========
+
+1. MySQL workbench download and  second install (255Mb)
+2. MySQL Community server download and First install (2.1Mb)
+
+MySQL:
+
+Note: update, alter any keyword not working go to edit top left corner click it select preference sql editer scroll down unselect safe.
+
+>create database jsd; // # is a command line example: #create database jsd;
+>usd jsd; // ctrl enter button run the code
+>create table student(rno int primary key,sname varchar(25),mark float);
+>insert into student values(4,'Jayalakshmi',96.9); // insert the value
+>select * from student; // show the database
+>update student set sname='Jayalakshmi G' where rno=4; // update the values
+>alter table student add result varchar(4); // alter is a add collum and rows
+>delete student where sname='jeeva'; // delete jeeva
+>use jsd; // usd created database
+>create table stud(rno int primary key auto_increment,sname varchar(25),mark int); // automatically increase roll numbers(rno)
+>insert into stud(sname,mark) value('vasan',100); // insert value
+>select * from stud; // show the table
+>delete from stud; // delete used deleted all data and specific data
+>truncate table stud; // truncate used for deleted total all data
+>drop table stud; // drop used table fully deleted
+> create table stud(rno int primary key auto_increment,sname varchar(25),mark int)auto_increment=1001; // roll no start from 1001
+>create table bank(cno int primary key, accno int unique,cname varchar(25)) // unique null value accepted and null value not primary key accepted
+>insert into bank(cno,accno,cname) values(null,4004,'ganesh'); // show error null value not primary key accepted
+>insert into bank(cno,accno,cname) values(1004,null,'ganesh'); // null value accepted
+>create table sales(pno int primary key auto_increment,pname varchar(20),salesdate timestamp default current_timestamp); // set date and time
+>insert into sales(pname) values('apple juice'); // insert value
+>insert into sales(pname) values('orang juice'); // insert value
+>select * from sales; // show table data
