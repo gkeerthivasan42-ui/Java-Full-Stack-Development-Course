@@ -804,3 +804,47 @@ Note: update, alter any keyword not working go to edit top left corner click it 
 >insert into sales(pname) values('apple juice'); // insert value
 >insert into sales(pname) values('orang juice'); // insert value
 >select * from sales; // show table data
+
+29.08.2026
+==========
+
+use jsd; // used database
+create table testmark(sno int,sname varchar(25),mark int check(mark>=0 and mark<=100));
+insert into testmark values(1002,'hema',0);
+select * from testmark;
+create table testnull(sno int,sname varchar(25) not null,mark int); // not null;
+insert into testnull values(1112,'tiya',100);
+select * from testnull;
+create table test1(rno int primary key, sname varchar(22), mark int);
+create table test2(rno int primary key, sname varchar(22), mark int,foreign key(rno) references test1(rno));
+
+merge two tables;
+
+#create table test1(rno int primary key, sname varchar(22), mark int);
+#create table test2(rno int primary key, sname varchar(22), mark int,foreign key(rno) references test1(rno));
+insert into test1 values(1001,'basha',100),(1002,'manikkam',10),(1003,'singam',100),(1004,'kantha',99);
+insert into test2 values(1005,'tamil',100);
+select * from test2;
+
+keys:
+1. primary key
+2. foreign key
+3. unique key
+4. default
+5. auto increment key
+
+31.08.2026 / alt+F+a -create new file
+==========
+website: getbootstrap.com
+1. Bootstrap copy of link and script to paste html file (Include via CDN)
+Bootstrap: inbuild styles and template
+
+linux:
+=======
+Oracle VirtualBox->downloads->170MB
+centOS-> ISO file -> 10GB
+
+01.09.2026
+==========
+
+box-shadow: 5px 5px 10px 2px gray; // x y blur padding color

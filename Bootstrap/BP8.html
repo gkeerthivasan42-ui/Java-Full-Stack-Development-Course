@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown Button</title>
+    <style type="text/css">
+        #menu #menuitem{
+            display: block;
+        }
+        a
+        {
+            text-decoration: none;
+            padding: 5px;
+            color: aqua;
+            background-color: brown;
+        }
+        #dropdown
+        {
+        
+            display: inline-block;
+        }
+        #menu
+        {
+              display: none;            
+        }
+        #dropdown:hover #menu
+        {
+            display: block;
+        }
+        #but1{
+            cursor: pointer;
+            border: 5px solid red;
+            background-color: yellow;
+            border-radius: 10px;
+            font-size: 25px;
+            box-shadow: 5px 5px 10px 2px gray;
+        }
+        #bu1:hover
+        {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+        }
+        #menuitem:hover
+        {
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Dropdown without using bootstrap</center></h1>
+    <div id="dropdown">
+    <button id="but1">Dropdown Menu</button>
+    <div id="menu">
+        <a id="menuitem" href="#">Home</a>
+        <a id="menuitem" href="#">about</a>
+        <a id="menuitem" href="#">education</a>
+        <a id="menuitem" href="#">contact me</a>
+    </div>
+    </div>
+</body>
+</html>
