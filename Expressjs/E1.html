@@ -6,14 +6,21 @@
     <title>Expressjs</title>
 </head>
 <body>
-    <form action="http://localhost:8891/testfun" method="get">
+    <!-- <form action="http://localhost:8891/testfun" method="get"> -->
+    <form action="http://localhost:8891/testfun" method="post">
         <input type="text" placeholder="Enter User Name" name="name">
         <br>
         <input type="password" placeholder="Enter Password" name="pw">
         <br>
-        <input type="submit" value="send data to backend">
+        <!-- <input type="submit" value="send data to backend"> -->
+         <input type="submit" value="insert/save">
         
         <input type="reset" value="clear">
+    </form>
+
+    <form action="http://localhost:8892/showall" method="get">
+        <input type="text" placeholder="Enter User Name" name="name">
+        <input type="submit" value="Show all Records">
     </form>
 </body>
 </html>

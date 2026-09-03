@@ -1036,3 +1036,57 @@ linux os:
 ========
 linux developed by linus in 1991 sunmacro
 free source
+
+03.09.2026
+==========
+cd Expressjs
+npm install body-parser
+
+body-parser:
+===========
+hiding form input values in address bar.
+
+use:
+  it is high security.(do not show password or any form input value in URL)
+
+installation:
+==============
+d:/projectfloder>npm install body-parser
+
+module import:
+==============
+var bp=require("body-parser")
+
+declearation:
+=============
+  var urlencodeparser=bp.urlencoded({extended:false})
+
+how to use function in post method(body parser)?
+================================================
+note: apply 3 parameters or aruguments
+
+1. userdefined functionname
+2. urlencodeparser
+3. arrow function
+
+app.post("/funname",urlencodeparser,(res,req)=>{
+  
+})
+
+linux:
+
+1. open Virtual machine it load the linux
+2. at top the new import and export, click on new. use red hatos ram 4gb, cpu 2gb, create Virtual mamory(rom)25gb
+3. finish
+
+after finish click on start
+
+user--->application(chrome,vs code)--->os--->kernel--->hardware(CPU,RAM,SSD)
+
+mysql:
+
+order by:
+
+use nmvn;
+select * from students
+order by client_id DESC;
