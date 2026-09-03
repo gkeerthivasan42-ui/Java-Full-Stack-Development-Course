@@ -848,3 +848,191 @@ centOS-> ISO file -> 10GB
 ==========
 
 box-shadow: 5px 5px 10px 2px gray; // x y blur padding color
+
+02.09.2026
+==========
+
+Express:
+========
+1. create folder for Express
+2. Create file .js format(E1.js)
+3. cd Expressjs - command
+4. npm install express - command
+
+Expressjs: (API is a path) request is get, response is post
+=========
+
+def: Runtime or Dynamic backend environment.
+
+meaning: To get value for end-user.
+
+application: html/react js(form inputs)
+
+installation:
+d:/project folder>npm install express
+
+two methodS:
+1) get method(default)
+   use: it will show all the form input values in URL
+
+2) post method
+   use: it won't show all the form input values in URL
+   (high security - must know about body-parser)
+
+.gitignore - is used for does not store in github
+this file inside below command
+/node_modules
+node_modules
+
+note: every program if change or update codes run use ths command node E1.js
+
+full programs get methodS
+
+E1.html:
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressjs</title>
+</head>
+<body>
+    <form action="http://localhost:8891/testfun" method="get">
+        <input type="text" placeholder="Enter User Name" name="name">
+        <br>
+        <input type="password" placeholder="Enter Password" name="pw">
+        <br>
+        <input type="submit" value="send data to backend">
+        
+        <input type="reset" value="clear">
+    </form>
+</body>
+</html>
+=====================================================================
+
+E1.js
+=====
+var exp=require("express")
+var app=new exp()
+
+//get method api
+app.get("/testfun",(req,res)=>{
+
+    res.send("<h1>Welcome to Express JS</h1>")
+    res.send()
+    
+}).listen(8891)
+
+console.log("port listening at 8891....")
+
+
+====================================================
+
+var exp=require("express")
+var app=new exp()
+var usr,pwd;
+
+//get method api
+app.get("/testfun",(req,res)=>{
+
+    usr=req.query.name;
+    pwd=req.query.pw;
+
+    //res.send("<h1>Welcome to Express JS</h1>")
+    res.write("<h1>User Name:"+usr+"</h1>")
+    res.write("<h1>User Name:"+pwd+"</h1>")
+    //res.send()
+    if(usr==="admin" && pwd==="admin@123")
+    {
+        res.write("<font color='green' size='7'>valid user</font>");
+    }
+    else
+    {
+        res.write("<font color='red' size='7'>invalid user</font>");
+    }
+    res.send()
+    
+}).listen(8891)
+
+console.log("port listening at 8891....")
+=========================================================
+
+connected to mangodb in express
+
+open command prompt
+>mongosh
+>show databases 
+>use jsd 
+>show collections // table
+>db.login.find() // show table or collection data
+
+==========================================================
+
+E2.js ---> E1.html (MangoDB connected)
+
+const {MongoClient}=require("mongodb") // very very important
+var exp=require("express")
+var app=new exp()
+var usr,pwd;
+
+//get method api
+app.get("/testfun",(req,res)=>{
+
+    usr=req.query.name;
+    pwd=req.query.pw;
+
+    var client=new MongoClient("mongodb://127.0.0.1:27017/"); // very very important
+    client.connect() // very very important
+    res.write("<h1>Express and MongoDB connection success<h2>"); // very very important
+
+   res.send()
+   
+}).listen(8891)
+
+console.log("port listening at 8891....")
+
+=================================================================
+
+E2.js ---> E1.html (MangoDB connected and value or data inserted)
+
+const {MongoClient}=require("mongodb") // very very important
+var exp=require("express")
+var app=new exp()
+var usr,pwd;
+
+//get method api
+app.get("/testfun",async(req,res)=>{ // important
+
+    usr=req.query.name;
+    pwd=req.query.pw;
+
+    const data={"usr":usr,"pwd":pwd} // important
+
+    var client=new MongoClient("mongodb://127.0.0.1:27017/"); // very very important
+    client.connect() // very very important
+    res.write("<h1>Express and MongoDB connection success<h2>"); // very very important
+
+    try
+    {
+        const result=await client.db("jsd").collection("login").insertOne(data) // inserted data to mangodb
+        console.log(result)
+        res.write("<h1>Successfully Inserted</h1>") // inserted data to mangodb
+    }
+    catch
+    {
+        console.log("error")
+        res.write("<h1>Error</h1>")
+    }
+
+   res.send()
+   
+}).listen(8891)
+
+console.log("port listening at 8891....")
+
+=================================================================================================================
+linux os:
+========
+linux developed by linus in 1991 sunmacro
+free source
