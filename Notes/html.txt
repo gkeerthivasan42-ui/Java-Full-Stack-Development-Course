@@ -1090,3 +1090,77 @@ order by:
 use nmvn;
 select * from students
 order by client_id DESC;
+
+05.06.2026
+==========
+node.js is a server-side platform
+node.js was developed by Ryan Dahl in 2009
+
+node.js is an open source,
+cross-platform Runtime environment
+for developing server-side and networking applications.
+
+node.js applications are written in JavaScript,
+and can be run within the Node.js runtime on
+OS X, Microsoft windows, and linux.
+
+Node.js also provides a rich library of various JavaScript node modules
+which simplifies the development of web applications
+using Node.js to a great extent.
+
+Node.js = Runtime Environment + JavaScript library
+
+where to use Node.js?
+======================
+I/O bound application
+Data Streaming Applications
+Data Intensive Real-time Applications (DIRT)
+JSON APIs based Applications
+single Page Applications.
+
+official website:
+==================
+https://nodejs.org/en/
+
+Features of Node.js
+===================
+
+Asynchronous Programming fast
+
+component of a Node.js applications. A Node.js application consist of the following three important component:
+
+1. Import required modules - We use the require directive to Apache HTTP Server.
+===========================
+
+2.Create server - A server which will listen to client's requests similar to Apache HTTP Server.
+===============
+
+3. Read request and return response -
+==================================
+The Server created in an earlier step will read the HTTP request made by the client which can be a browser or a console and return the response.
+
+Simple program:
+===============
+
+var http = require("http");
+
+1. floder nodejs
+2. cd nodejs
+3. npm init (untill enter package.json created)
+4.npm install http
+5. create file inside Nodejs .gitignore
+  1. \node_modules
+  2. node_modules
+  3. .env
+6. node N1.js
+7. go to chrome http://127.0.0.1:2003/
+
+Example:
+N1.js
+
+const http=require("http")
+http.createServer(function(req,res){
+
+    res.end("<h1>Welcome To Node JS</h1>")
+}).listen(2003)
+console.log("port listening at 2003....")
