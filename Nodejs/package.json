@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "events": "^3.3.0",
     "http": "^0.0.1-security"
   }
 }
