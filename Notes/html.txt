@@ -1260,3 +1260,99 @@ command prompt or terminal
 
  # whoami
  # passwd root - this command used for password change
+
+ centOS
+
+ common linux server Software
+
+  Web Server:
+    Apache
+    Ngnix
+  
+  DataBase Server
+    MySQL
+    PostgreSQL
+    MariaDB
+
+    it is used store data storage/manage
+
+  File Server:
+    it is used to share a Network file
+
+  SSH Server
+    it is used to access a linux server as remote
+
+    ssh 
+    common implementation:
+    OpenSSH
+
+  Main Server:
+    it is a software to handling Email sending/receiving
+
+Introduction to Linux Unit:
+=========================
+Operating System
+      |
+kernel
+    |
+linux distribution
+    |
+ubuntu / Debin / fedora / arch
+      |
+software + package Manager
+      |
+linux desktop / server / embedded device
+
+Important Terms:
+===============
+OS ->computer resourse E manage saiyum system software
+Kernal -> os- oda core.
+Linux karnel -> open source -> Kernal
+Distribution->Kernal+tools+application+package manager etc.
+open source ->source code available order an open source license
+package manager->
+repository
+server
+
+simple comparsion:
+=====================
+
+FEATURE	                    ROOT USER            	NORMAL USER
+system access	            almost everything	        limited
+modify system files	          yes               	no(usally)
+install software	            yes	                no(sudo needed)
+delete system file	          yes	                     no
+access other user's file	    yes	                  no(usally)
+create files in home	        yes                     	yes
+UID	                            0                 	usally 1000+
+studo needed	                  no	                  yes(yes admin tasks) sub-->temporary access
+
+
+Basic Navigation Command:
+=========================
+1. pwd ===========>Current directory paaka 
+2. ls  ===========>to see the files and folders
+3. ls -l  ========>Detailed List
+4. ls -a  ========>To see all the files including hidden files also 
+5. ls -lh  =======>File size and readable format
+6. cd folder =====>to go folder
+7. cd..  =========>one level back
+8. cd /  =========>Root directory
+9. cd ~  =========>Home Directory
+10. clear  =======>Terminal Clear 
+11. history ======>Previous Command 
+12. whoami  ======>Current User
+13. hostname  ====>Computer name
+14. date =========>current date and time
+15. cal ==========>calender
+16. su ===========>switch user
+17. touch text.txt ===> is the create file
+18. cat text.txt =====> see the file content
+19. echo "Hello Keerthi">content.txt ====> write the content using coomand line
+
+
+touch     =====>create
+cat =======>view
+echo ========>
+ls ==========>details
+rm ============> remove or delete
