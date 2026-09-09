@@ -5,7 +5,7 @@ var events=require("events")
 var eventEmitter=new events.EventEmitter();
 
 //bind event (called)
-const dis=()=>{
+const dis=()=>{ // dis function name and event handler
     console.log("events called")
 }
 eventEmitter.on("keerthi",dis)

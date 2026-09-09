@@ -1237,3 +1237,26 @@ whoami
 ctrl + L clear screen
 ctrl + c cut
 ctrl + Shift + (+) zoom in
+
+09.09.2026
+==========
+linux is a casesenecetive
+linux is runing CLI
+windows is runing GUI
+linux kernel is not os, small part of os
+files and folder rename using underscore not using space
+root user can create, edit, delete, update can change any configuration
+super user can delete entire os.
+
+using puTTY Software connect the server linux ip address into windows
+ip
+user name
+passward
+
+
+command prompt or terminal
+ 1. user name & prompt symbol
+ 2. super user(root) # prompt symbol - host
+
+ # whoami
+ # passwd root - this command used for password change
