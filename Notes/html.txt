@@ -1356,3 +1356,62 @@ cat =======>view
 echo ========>
 ls ==========>details
 rm ============> remove or delete
+
+10.09.2026
+==========
+java program test:
+
+1) input: 
+    enter your name: KEERTHIVASAN SALEM
+    output:
+      a is found at index(s):8,10,14
+    ================================
+    output:
+      z is not founded
+
+Array:
+=====
+  definition:
+    a set of value arranged in sequential of signal name variable
+
+set of value--->   {val1,val2,........}
+sequential arrange----> 0   1   2  ........
+single name var ------> only one variable
+same data type ----> {11,12,13}
+                     {'a','S','c','d','%'}
+                     {"Keerthi","jeeva","nishath","Srikaath"}
+
+1) single or one dimensional array
+2) two or multi dimensional array
+
+1) single dimensional array initialization method:
+
+  datatype variablename[]={value1,value2,.......}
+
+  ex:
+  int mark[]={44,66,77,88,88};
+  or
+  int[] marks={44,66,77,88,99};
+
+  meaning:
+
+  mark[0] -----> 44
+  mark[1] -----> 66
+  mark[2] -----> 77
+  mark[3] -----> 88
+  .............
+
+  array inbuilt methods:
+  marks.length; (note don't use length())
+
+
+Home work:
+=========
+1. find max of array
+2. find min of array
+3. sum of array
+4. sum of even no. in an array, 
+5. display
+
+Run time another name Dynamic
+compile time another name static
