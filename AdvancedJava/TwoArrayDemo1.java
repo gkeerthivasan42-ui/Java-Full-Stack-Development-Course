@@ -25,6 +25,7 @@ public class TwoArrayDemo1{
             }
            System.out.println();
         }
+        scan.close();
     }
     
 }

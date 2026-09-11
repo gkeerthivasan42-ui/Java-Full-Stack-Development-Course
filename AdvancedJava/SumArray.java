@@ -25,6 +25,7 @@ public class SumArray{
             }
            System.out.println();
         }
+        scan.close();
     }
     
 }
