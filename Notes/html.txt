@@ -1411,7 +1411,86 @@ Home work:
 2. find min of array
 3. sum of array
 4. sum of even no. in an array, 
-5. display
+5. display 
 
 Run time another name Dynamic
 compile time another name static
+
+linux:
+======
+file system structure
+1. /bin -> User level commands(cat,cp,cd,is,etc)
+2. /sbin -> System/Filesystem level command(booting,restoring,recovering,and/or repairing the system)
+3. /etc -> configuration Files
+4./dev -> Device files(Disc,CDROM,Flash drive)
+5./proc -> Running process
+6./var -> System Logs
+7./tmp -> Directory for Temporary Files
+===================================
+8./usr -> User programs and commands
+9./home -> Directory for User
+10./boot -> Contains files used by booted loader (grub.cfg)
+11./lib -> C-programming files needed by command s and apps
+12./opt -> optional add-on apps (Not part of OS)
+13./mnt -> To mount removable media manually
+14./media -> To mount external hardisk Flaskdrive, CDROM
+15./srv -> Site Specific data (FTP,WWW)
+
+linux terminal:
+1. $cd / - Moves to the root directory.
+2. $pwd - Displays the present working directory.
+3. &ls - Lists the files and directories in the current location.
+
+11.09.2026
+==========
+
+OOPs: (very Important)
+=====
+
+OOPS: object oriented programming structure
+
+object: instance of the class.
+
+class: class is user defined data type.
+
+       class is blue print.
+       class is a template.
+       class is a common structure and behaviour to all objects.
+       class is a hierarchy.
+
+syntax: class
+
+  class classname
+  {
+    variables
+    methods()
+  }
+
+syntax: object
+
+  classname objectname = new classname(parameters or args)
+
+syntax: how to access class mamber(variables+methods)
+
+  objectname.variablename;
+  objectname.methodname();
+
+  note: here (.) is membership operator.
+
+ctrl + space + enter - automatically create header file cursor on Scanner in java program
+
+homeWork:
+=========
+class member
+  1) rno     int
+  2)sname    string
+  3)gender   char  (m,f)
+  4)mark     float
+  5)ismarried boolean (true,false)
+
+=============================================
+1) get n number of student
+2) count total no. of female students  ex: 7
+3) display centum students list if(s[i].mark==100)
+4) display only married students student rno and sname if(s[i].ismarried==true)
+===============================================================================
