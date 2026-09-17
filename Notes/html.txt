@@ -1332,7 +1332,7 @@ Basic Navigation Command:
 =========================
 1. pwd ===========>Current directory paaka 
 2. ls  ===========>to see the files and folders
-3. ls -l  ========>Detailed List
+3. ls -l  ========>Detailed List  
 4. ls -a  ========>To see all the files including hidden files also 
 5. ls -lh  =======>File size and readable format
 6. cd folder =====>to go folder
@@ -1494,3 +1494,260 @@ class member
 3) display centum students list if(s[i].mark==100)
 4) display only married students student rno and sname if(s[i].ismarried==true)
 ===============================================================================
+
+linux:
+======
+file and directories command:
+====================
+Create:
+1. touch file.txt 
+  - new file created
+2. mkdir test
+  - create new floder
+3. mkdir -p project/src/components
+  - nested floder creation
+
+Copy:
+1. cp file.txt backup.txt
+  - copy the file content into another file
+2. 
+
+Move:
+
+Reading files:
+1. cat
+2. less
+3. more
+4. head
+5. tail
+
+12.09.2026
+==========
+constructor:
+============
+
+	constructor is a special member method. it is used to initialize object values.
+
+types of constructor:
+
+	1) default constructor or null constructor
+	2) argument or parametarized constructor
+	3) copy constructor
+	4) overloading constructor (polymorphism)
+
+
+rules of constructor:
+=======================
+
+	*) classname and constructor name should be equal.
+	*) constructor should not be private access
+	*) constructor has no return type (ie. dont use void)
+	*) constructor called at the time of object creation.
+
+inheritance:
+============
+	The mechanism of deriving derive class from the old one is known as inheritance.
+
+	purpose: reusability of code
+
+types of inheritance:
+
+1) single inheritance
+	only one base class and only one derive class is known as single inheritance.
+
+2) multiple inheritance
+	more than one base class and only one derive class (java does not support multiple inheritance so we can use interface concepts in next chapter)
+
+3) multilevel:
+	more than one level .
+
+4) hierarchical inheritance:
+	it is tree format : only one base class and more derive class.
+
+5) hybrid inheritance:
+	combination of any two inheritance.
+
+class Daddy
+{
+
+}
+class Mummy
+{
+
+}
+class Daughter extends  Daddy,Mummy
+{
+    
+}
+public class Multiple {
+    
+}
+
+interface:
+==========
+
+	overriding purpose
+
+	syntax:
+	
+	interface interfacename1
+	{
+		variable define only; // should not private or protected
+		ex: int mark=100;
+		method incomplement only;
+		ex:
+		void dis1();
+		
+	}
+
+	interface interfacename2
+	{
+
+		void dis2();
+	}
+	class classname implements interface1,interface2
+	{
+		//override methods
+		public void dis1()
+		{
+
+		}
+		public void dis2()
+		{
+
+		}
+	}
+
+abstract class:
+================
+
+	def: set of complete and incomplete methods.
+
+	purpose: override purpose
+
+	syntax:
+	abstract class classname
+	{
+		variable declare + define;
+		method complete + incomplete;
+	}
+
+	note: we can't create object to abstract class.
+
+linux:
+======
+SEARCH COMMANDS:
+================
+find /home -name "file.txt"========>find files
+find / -name "#.log" =============>peryaril files to search
+find . -type f   ==============> log in la mudiyura ella files um theda
+find . -type d ==============>to find directories / folders
+grep "error" file.txt==========> search files inside text
+grep -i "error" file.txt ======>file kula iruka specific words theda use aagudhu
+grep -r "error" /var/log/ ======>folder la iruka ella file layum recursive ahh theda use aagudhu
+which python ===========>to search where is python command
+which java =============>to search where is java command 
+which ls =========> to search where is list directory 
+ctrl + / q =======>Exit 
+
+TEXT EDIT COMMANDS:
+===================
+vi filename.txt
+    1. i =======>Insert mode
+    2. ESC =====>Exit insert mode
+    3. :w ========>save
+    4. :q ========>quit
+    5. :wq =======>save and quit
+    6. :q! =======>quit without saving
+
+whoami =====>to know user
+id =========>to show user id
+who =========>who are all logined
+w ===========>logged users enna senjurukanganu paka 
+users =======>to see all logged users
+useradd username ========> to add user
+
+15.09.2026
+==========
+ what is abstraction in java?
+  only showing essential or important information. hiding internal details.
+
+real time example:
+    driver:
+    drivee knowing only how to apply break, horn, accellator, .....
+
+    atm machine:
+
+    tv remote:
+
+ what is encapsulation in java?
+    wrapping of data.
+
+    technical: class (var+methods)
+
+ real time examples? 
+    ex:
+    tube tablet
+  
+access specifier:
+
+private----------> 
+public----------->
+protected-------->
+default---------->
+
+package or pack or floder (note: package name should small and class name first letter Should be captat)
+
+                        pack1                                   pack2
+                    base      drivee        main             base              drive
+private             yes         no            no              no                no
+public              yes         yes           yes             yes               yes
+protected           yes         yes           yes             no                yes
+default             yes         yes           yes             no                no
+
+Exception handling:
+
+def: To avoid runtime or Dynamic error.
+
+types:
+  1) checked Exceptions (compile time)
+  2) unchecked Exceptions (runtime)
+
+inbuilt Exception:
+  -ArithmeticException (0 / 0 any/0)
+  -InputMismatchException (wrong input format)
+  -ArrayIndexOutOfBoundsException (out of range)
+  -NegativeArraySizeException(we can't declare -ve size)
+  -FileNotFoundException
+custom or userdefined Exception:
+  -AgeException
+  -KeerthiException
+  -PasswordException
+ note: Exception handling only using runtime find runtime errors.
+syntax:
+  try
+  {
+    //write java code
+  }
+  catch(Exceptionname obj)
+  {
+    //only if error found in try block
+  }
+  finally
+  {
+    //optional
+    //it will work always when error found or not.
+  }
+note: if you use try keyword must use catch keyword also default structure.
+
+public class CustomException {
+    public static void main(String[] args)throws Exception { // automatically identify errors
+        new AgeException(); 
+    }
+    
+}
+
+Linux:
+=======
+
+rm filename - 
