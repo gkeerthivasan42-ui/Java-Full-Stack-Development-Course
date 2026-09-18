@@ -1751,3 +1751,491 @@ Linux:
 =======
 
 rm filename - 
+
+17.09.2026
+==========
+
+JDBS:
+=====
+ 
+ Using Eclipse ide(Eclipse IDE for Java Developers - 2026-06)
+
+ google search (download Eclipse for java developers)
+ Eclipse (144Mb) 
+ google search (download mysql connector java 8.0 33 jar)
+ mysql connector (4.83mb)
+
+ to run  Eclipse?
+ ctrl+f11
+ or
+ green color play button
+
+ then
+
+ 1. database right click proparties then (delete the file module-info.java)
+ 2. java Build Path
+ 3. goto libraries
+ 4. select the folder mysql connector java 8.0 33 jar
+ 5. open
+ 6. apply
+
+package databasework;
+
+public class P1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver accepted");
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error Reason:"+e.toString());
+		}
+	
+	}
+}
+
+
+com.mysql.cj.jdbc.Driver - package(mysql connector java 8.0 33 jar)
+com - folder
+mysql - folder
+cj - folder
+jdbc - folder
+Driver - Class
+
+very important topics:
+======================
+
+package databasework;
+import java.sql.*;------------------------------> very important this one
+public class P1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver accepted");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jsd", "root", "12345");-------> very important this one
+			System.out.println("Connection Success");
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error Reason:"+e.toString());
+		}
+	}
+}
+
+show table values:
+==================
+package databasework;
+import java.sql.*;
+public class P1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver accepted");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jsd", "root", "12345");
+			System.out.println("Connection Success");
+			
+			// --- data retrive from mysql table name: student
+			
+			Statement st=con.createStatement();
+			ResultSet rs=st.executeQuery("select * from student");
+			while(rs.next())
+			{
+				System.out.println(rs.getString(1)+"    "+rs.getString(2)+"    "+rs.getString(3)+"    "+rs.getString(4));
+			}
+			rs.close();st.close();con.close();
+			//======================end==========================
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error Reason:"+e.toString());
+		}
+	}
+}
+
+
+inserted values:
+================
+package databasework;
+import java.sql.*;
+import java.util.Scanner;
+public class P2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter rno sname mark result");
+		int rno=scan.nextInt();
+		String sname=scan.next();
+		float mark=scan.nextFloat();
+		String result=scan.next();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver accepted");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jsd", "root", "12345");
+			System.out.println("Connection Success");
+			
+			// --- data insert into from mysql table name: student
+			
+			Statement st=con.createStatement();
+			int res=st.executeUpdate("insert into student values("+rno+",'"+sname+"',"+mark+",'"+result+"')");
+			if(res==1)
+			{
+				System.out.println("Successfully Inserted");
+			}
+			else
+			{
+				System.out.println("Not Inserted");
+			}
+			st.close();con.close();
+			
+			//======================end==========================
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error Reason:"+e.toString());
+		}
+	}
+}
+
+other notes: REST API is a axios
+
+Delete the table row:
+=====================
+package databasework;
+import java.sql.*;
+import java.util.Scanner;
+public class P3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter rno to be deleted:");
+		int rno=scan.nextInt();
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver accepted");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jsd", "root", "12345");
+			System.out.println("Connection Success");
+			
+			// --- delete data
+			
+			Statement st=con.createStatement();
+			int res=st.executeUpdate("delete from student where rno="+rno);
+			if(res==1)
+			{
+				System.out.println("Successfully Deleted");
+			}
+			else
+			{
+				System.out.println("Not Deleted because record not found");
+			}
+			st.close();con.close();
+			
+			//======================end==========================
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error Reason:"+e.toString());
+		}
+	}
+}
+
+linux:
+======
+ps -p 2929
+ps -p 2929 v-f
+
+program
+  |
+  | execute
+  |
+process
+  |
+------------------
+  |               |
+application  |   DAEMON
+  |          |
+user interact   background
+
+
+
+process
+  A process is an instance of a program that is Currently being executed.
+
+Application
+  An application is a user-interactive process that provides functionality directly to the user.
+
+DAEMON
+  A deamon in a background process that normally operates without direct user interaction.
+
+Service
+  A service is a process or group of processess that provides
+
+Program  = Code/software stored on system
+Process  = Running instance of a program
+Application = User-interactive process
+Daemon   = Background, non-interactive process
+Service  = Provides functionality to clients
+PID      = Process ID
+top      = Live process/resource monitoring
+R        = Running
+S        = Sleeping
+%CPU     = CPU usage
+%MEM     = Memory usage
+Load Average = 1, 5, 15 minute workload averages
+
+1. top
+Running processes + CPU + RAM usage live-a பார்க்க.
+top
+Useful keys inside top:
+q       → Exit
+Shift+P → CPU usage based sort
+Shift+M → Memory usage based sort
+
+2. ps
+Running processes-oda snapshot பார்க்க.
+ps
+More detailed:
+ps -f
+All users-oda processes:
+ps aux
+Example
+ps aux
+Output-la:
+USER   PID   %CPU   %MEM   COMMAND
+root   123    0.0    0.5   sshd
+user   456    2.1    1.2   firefox
+
+3. ps -ef
+Full process list பார்க்க commonly used command.
+ps -ef
+Important columns:
+UID
+PID
+PPID
+CMD
+PID find panna
+ps -ef | grep ssh
+Example:
+root   1234   ...   sshd
+Here:
+PID = 1234
+
+4. pgrep
+Process name வைத்து PID find panna.
+pgrep sshd
+Example:
+1234
+Multiple PIDs irundha:
+1234
+1456
+5. pidof
+Program name-ku corresponding PID find panna.
+pidof sshd
+Example:
+1234
+6. pstree
+Processes parent-child relationship-la பார்க்க.
+pstree
+More useful:
+pstree -p
+-p → PID show pannum.
+Example:
+systemd(1)
+ ├─sshd(1234)
+ │   └─bash(1250)
+ └─NetworkManager(800)
+7. systemctl
+Linux services manage panna most important command.
+systemctl
+8. Check Service Status
+Example: SSH service.
+systemctl status sshd
+You'll see:
+Active: active (running)
+Meaning:
+SSH service currently running.
+9. Start a Service
+sudo systemctl start sshd
+Meaning:
+sshd service-a start pannum.
+
+
+10. Stop a Service
+sudo systemctl stop sshd
+Meaning:
+Running SSH service-a stop pannum.
+⚠️ Remote SSH-la connected irukkumbodhu sshd stop panna connection affect aagalam.
+11. Restart a Service
+sudo systemctl restart sshd
+Meaning:
+Service stop + start.
+Configuration change pannitu service restart panna commonly use pannuvanga.
+12. Reload a Service
+sudo systemctl reload sshd
+Meaning:
+Service-a completely stop pannama configuration reload panna request.
+But every service reload support pannum-nu guarantee illa.
+13. Enable Service
+Boot time-la automatically service start aaganumna:
+sudo systemctl enable sshd
+Meaning:
+System Boot
+    ↓
+sshd automatically starts
+14. Disable Service
+Boot-la automatically start aaga koodadhuna:
+sudo systemctl disable sshd
+Important:
+disable usually affects future boot, not necessarily the service currently running.
+Current running service-a stop panna:
+sudo systemctl stop sshd
+15. Enable + Start Together
+sudo systemctl enable --now sshd
+Meaning:
+Enable → future boot-la start
++
+Start  → ippo immediately start
+16. Check if Service is Active
+systemctl is-active sshd
+Output:
+active
+or:
+inactive
+17. Check if Service is Enabled
+systemctl is-enabled sshd
+Output:
+enabled
+or:
+disabled
+18. List Running Services
+systemctl list-units --type=service
+Only currently active services:
+systemctl list-units --type=service --state=running
+19. List All Installed Service Files
+systemctl list-unit-files --type=service
+Idhula:
+Enabled - AUTOMATIC RUNNING
+Disabled - NOT ABLE TO RUN
+Static - Direct-ah enable panna mudiyadhu.
+Usually another service/target depend aagumbodhu start aagum 
+Masked -
+pondra states paakalaam
+
+State
+Simple meaning
+enabled
+Boot-la automatically start
+disabled
+ Boot-la automatically start aagadhu
+masked
+Start panna blocked
+static
+Direct enable illa; dependency moolama start aagalam
+
+20. Find Failed Services
+systemctl --failed
+or:
+systemctl list-units --failed
+Useful when troubleshooting boot/service problems.
+21. View Service Logs
+journalctl service logs பார்க்க useful.
+journalctl -u sshd
+Recent logs:
+journalctl -u sshd -n 20
+Live logs:
+journalctl -u sshd -f
+-f = continuously follow new log entries.
+Exit:
+Ctrl + C
+22. kill
+PID தெரிந்த process-a terminate panna.
+Suppose:
+PID = 1234
+Then:
+kill 1234
+Force kill
+kill -9 1234
+⚠️ kill -9 forceful. Normal kill work aagala na mattum use pannradhu better.
+23. killall
+Process name வைத்து terminate panna:
+killall firefox
+⚠️ Same name-la multiple processes irundha multiple processes affect aagalam.
+
+24. nice
+Process priority set panna.
+Example:
+nice -n 10 command
+Example:
+nice -n 10 myprogram
+25. renice
+Already running process-oda priority change panna.
+renice 10 -p 1234
+Here:
+10   → nice value
+1234 → PID
+26. CPU Load Practice
+CPU load observe panna:
+Terminal 1
+yes > /dev/null
+Terminal 2
+top
+yes process CPU usage increase pannum.
+Stop Terminal 1:
+Ctrl + C
+Then top-la CPU/load change observe pannunga.
+Important Commands Cheat Sheet
+PROCESS COMMANDS
+────────────────────────────────
+top
+ps
+ps aux
+ps -ef
+pgrep <process>
+pidof <process>
+pstree -p
+SERVICE COMMANDS
+────────────────────────────────
+systemctl status <service>
+systemctl start <service>
+systemctl stop <service>
+systemctl restart <service>
+systemctl reload <service>
+systemctl enable <service>
+systemctl disable <service>
+systemctl enable --now <service>
+systemctl is-active <service>
+systemctl is-enabled <service>
+systemctl list-units --type=service
+systemctl --failed
+
+LOG COMMANDS
+────────────────────────────────
+journalctl -u <service>
+journalctl -u <service> -n 20
+journalctl -u <service> -f
+PROCESS CONTROL
+────────────────────────────────
+kill <PID>
+kill -9 <PID>
+killall <process>
+CentOS-la practice-ku example
+systemctl status sshd
+systemctl is-active sshd
+systemctl is-enabled sshd
+ps -ef | grep sshd
+pgrep sshd
+top
+Core-a remember pannunga:
+ps/top       → Processes பார்க்க
+systemctl    → Services manage பண்ண
+journalctl   → Service logs பார்க்க
+kill         → Process terminate பண்ண
