@@ -2239,3 +2239,129 @@ ps/top       → Processes பார்க்க
 systemctl    → Services manage பண்ண
 journalctl   → Service logs பார்க்க
 kill         → Process terminate பண்ண
+
+19.09.2026
+==========
+1. Eclipse IDE for Enterprise Java and Web Developers installation
+
+22.09.2026
+==========
+What is Spring Boot?
+  Sprint Boot provides a good platform for java developers to develop a stand-alone and production-grade
+  Spring application that you can just run.
+
+  it is open source
+
+  Development Year:2013
+
+  Advantages of Spring Boot:
+
+  1. Easy to understand and develop spring applications
+  2. increase productivity
+  3. Reduces the development time
+
+  Spring Boot Features
+  ====================
+
+  Goals:
+  Spring Boot designed with the following goals:
+  1. To avoid complex XML configuration in Spring
+  2. To develop a production readySpring applications in an easier way
+  3. To reduce the development time and run the application independently
+  4. Offer an easier way of getting started with the application
+
+  Why Spring Boot?
+  You can choose Spring Boot because of the features and benefits it offers as given here:
+  1. It provides a flexible way to configure Java Beans, XML configurations, and database Transactions.
+  2. It provides a powerful batch processing and manual configurations are needed.
+  3. In Spring Boot, everything is in auto configured: no manual configurations are needed.
+  4. It offers annotation-based spring Application
+  5. 
+
+  How does it works?
+  Spring Boot automatically configures your application based on the dependencies you have added to the project by using @EnableAutoConfiguration annotation.
+
+  For Example:
+  if MySQL database is on your classpath, but you have not configured any database connection, then Spring Boot auto-configures an in-memry database.
+
+  The entry point of the spring boot application is the class Contains @SpringBootApplication annotation and the main method.
+
+  Spring Boot automatically scans all the components included in the project by using @ComputerScan annotation.
+
+SpringBoot installation
+=======================
+1. https://start.spring.io/
+2. setup
+    Project: Maven
+    language: Java
+    Spring Boot: 4.1.1
+    Project Metadata:
+      Group: com.keerthivasanspring
+      Artifact: demo 
+      Packagename: com.keerthivasanspring.demo
+      Packaging: Jar
+      Configuration: Properties
+      Java: 21
+3. add Dependencies
+    1. Spring Web (Web)
+    2. Spring Boot DevTools (Developer Tool)
+4. then Generate 
+    ctrl+enter
+
+23.06.2026
+===========
+What is MVC?
+
+The Spring Boot framework leverages the Model-View-Controller (MVC) architectural pattern to structure web applications, promoting a clear separation of concerns.
+
+1. Model:
+=========
+The Model represents the application's data and business logic.
+
+It interacts with the data source (e.g., database) to retrieve, store, and manipulate data.
+
+In a Spring Boot application, this often involves entities, repositories (for data access), and service classes (for business logic).
+
+2. View:(frontend)
+=========
+The View is responsible for presenting the data to the user.
+
+It renders the user interface based on the data provided by the Model,
+
+Common view technologies in Spring Boot include Thymeleaf, JSP, or even returning JSON/XML for RESTful APIs.
+
+3. Controller:()
+==============
+The Controller acts as an intermediary between the Model and the View
+
+It receives user requests, processes them, interacts with the Model to fetch or update data, and then sele appropriate View to display the result.
+
+In Spring Boot, controllers are typically Java classes annotated with @controller or @Restcontroller (for RESTful Service).
+
+Spring Boot MVC Flow and Benefits
+=================================
+
+This structure ensures that the presentation logic (View), business logic (Model), and request handling (Controller) are distinct, making the application more modular, maintainable, and scalable.
+
+
+Flow in MVC
+
+1.User interacts with the View (e.g., submits a form)
+
+2.Controller receives the user's action
+
+3. Controller interacts with the Model if necessary (e.g., to save data)
+
+4. Controller selects and updates the appropriate View
+
+5. Updated View is presented to the user
+
+Benefits of MVC
+
+Separation of Concerns. Each component has a specific role, making the application easier to develop and maintain
+
+Modularity: Components can be developed and tested independently
+
+Flexibility: Easy to modify or replace individual components without affecting the entire system
+
+Reusability: Models can be reused across different interfaces
