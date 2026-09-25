@@ -2365,3 +2365,92 @@ Modularity: Components can be developed and tested independently
 Flexibility: Easy to modify or replace individual components without affecting the entire system
 
 Reusability: Models can be reused across different interfaces
+
+24.09.2026
+===========
+
+SpringBoot View Concept from MVC:
+=================================
+
+step 1:
+	install thymeleaf (purpose --> implement .html file)
+
+	pom.xml:  (project object model ---> use --> maintain dependencies)
+	========
+
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+
+	ctrl+s (save) --->it will install automattically
+
+step 2:
+	add html file:
+	==============
+	src.main.resources -------> templates folder -----> right click
+	---> new ---> html file
+
+	file name: index.html
+
+html file shold be this format:
+===============================
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text=${name}></h1>
+<h1>Welcome To View in MVC</h1>
+</body>
+</html>
+step 3:
+=======
+	controller:src/main/java
+
+	com.gowthamspring.demoproject------>right click---> class--> PeopleController
+
+example:
+	
+package com.gowthamanspring.demoproject;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class PeopleController {
+
+	@GetMapping("/")
+	public String getPeople(Model model)
+	{
+		model.addAttribute("name","gowthaman");
+		return "index";
+	}
+}
+
+note: index --->template folder -->index.html file
+
+25.09.2026
+==========
+
+Thymeleaf attribute:
+====================
+
+Explanation of Thymeleaf Attributes:
+
+th:text="${variableName}": Replaces the element's text content with the value of the variableName from the model.
+
+th:each="item: ${collection}": Iterates over a collection (e.g., a List) and renders the enclosed element for each item. You can then access properties of each item within the loop.
+
+th:if="${condition}": Renders the element only if the condition evaluates to true.
+
+th:href="@{/path}": Creates dynamic URLs.
+
+th: value="${variableName}": Sets the value attribute of input fields.
+
+By following these steps, you can effectively integrate Thymeleaf with Spring Bootoot
+
+create dynamic web pages that display data from your backend.

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text=${name}></h1>
+<h1 th:text=${age}></h1>
+<h1 th:text=${city}></h1>
+<h1 th:text=${state}></h1>
+<h1>Welcome To View in MVC</h1>
+<h1>M for Model</h1>
+<h1>V for View</h1>
+<h1>C for Controller</h1>
+
+Student Name:<input type="text" th:value=${name} placeholder="data from controller"><br>
+Age:<input type="text" th:value=${age} placeholder="data from controller"><br>
+city:<input type="text" th:value=${city} placeholder="data from controller"><br>
+state:<input type="text" th:value=${state} placeholder="data from controller">
+</body>
+</html>
