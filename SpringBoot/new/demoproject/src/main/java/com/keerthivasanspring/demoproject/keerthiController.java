@@ -37,4 +37,12 @@ public class keerthiController {
 	{
 		return "pro";
 	}
+	
+	@GetMapping("/api/v5")
+	public String testAge(Model model)
+	{
+		int age=13;
+		model.addAttribute("studage",age);
+		return "age";
+	}
 }
