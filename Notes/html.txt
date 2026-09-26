@@ -2454,3 +2454,12 @@ th: value="${variableName}": Sets the value attribute of input fields.
 By following these steps, you can effectively integrate Thymeleaf with Spring Bootoot
 
 create dynamic web pages that display data from your backend.
+
+return"html or jsp file"
+pom.xml is a heart (project object model)
+jsp is a java server pages
+
+26.09.2026
+==========
+
+

@@ -32,4 +32,9 @@ public class keerthiController {
 		
 		return "myfile";	
 	}
+	@GetMapping("/api/v4")
+	public String jspmethod(Model model)
+	{
+		return "pro";
+	}
 }
