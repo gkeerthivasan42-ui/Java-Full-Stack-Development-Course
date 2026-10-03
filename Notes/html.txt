@@ -2557,3 +2557,70 @@ spring.mvc.view.suffix=.jsp
 
 step 5: (run)
 open browswer: http://localhost:8080/api/v4
+
+28.09.2026
+==========
+
+th:href="@{/path}":
+
+29.09.2026
+==========
+Pom file(pom.xml)
+line 1 error if add http to https and save
+line 8 error if add <version>4.1.1</version> to <version>4.0.1</version> and save
+
+30.09.2026
+==========
+Dependencies
+1. Dev Tool - auto restart and save
+2. web - model, view control
+3. 
+4. MySQL - connected to mysql
+5. GetMapping - url Management (apply to controller)
+6. Entity - it is used creating the table
+
+Entity:
+=======
+Entities:
+
+Definition:
+
+An entity in Spring Data (specifically Spring Data JPA) represents a persistence-aware domain object that directly maps to a table in a relational database. Each instance of an entity corresponds to a row in that table.
+
+Annotations:
+
+Entities are typically marked with the @Entity annotation. Key properties within the entity are annotated with @Id to designate the primary key and @GeneratedValue for automatic ID generation.
+
+Purpose:
+
+Entities allow developers to interact with database data using object-oriented principles, abstracting away direct SQL interactions.
+
+AI:
+===
+python download and install
+anpconda download and install
+launch spider
+
+1.speech.py
+===========
+
+import pyttsx3
+print("module pyttsx3 accepted")
+engine=pyttsx3.init('sapi5')
+voices=engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id)
+engine.say("i am keerthivasan from salem")
+engine.runAndWait()
+
+2. 
+
+import pyttsx3
+print("module pyttsx3 accepted")
+engine=pyttsx3.init('sapi5')
+voices=engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id)
+data=input("Enter your text: ")
+for _ in range(5):
+    engine.say("hello i am"+data)
+engine.runAndWait()
+

@@ -18,5 +18,8 @@ Student Name:<input type="text" th:value=${name} placeholder="data from controll
 Age:<input type="text" th:value=${age} placeholder="data from controller"><br>
 city:<input type="text" th:value=${city} placeholder="data from controller"><br>
 state:<input type="text" th:value=${state} placeholder="data from controller">
+
+<a th:href="@{/api/v3}">Display Student Name and Age List</a>
+<a th:href="@{/api/v5}">Test Student Age adult or minor</a>
 </body>
 </html>

@@ -41,7 +41,7 @@ public class keerthiController {
 	@GetMapping("/api/v5")
 	public String testAge(Model model)
 	{
-		int age=13;
+		int age=19;
 		model.addAttribute("studage",age);
 		return "age";
 	}
